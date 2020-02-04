@@ -55,7 +55,7 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
-  const homePage = (data || {}).sanityHomePage
+  const {title, _rawBody} = (data || {}).sanityHomePage
 
   if (!site) {
     throw new Error(
@@ -72,8 +72,8 @@ const IndexPage = props => {
       />
       <Container>
         <h1 hidden>Welcome to {site.title}</h1>
-        <h1>{homePage.title}</h1>
-        {/* <h2>{_rawBody && <PortableText blocks={_rawBody} />}</h2> */}
+        <h1>{title}</h1>
+        {_rawBody && <PortableText blocks={_rawBody} />}
       </Container>
     </Layout>
   )
