@@ -38,6 +38,7 @@ export const query = graphql`
     sanityHomePage {
       _id
       title
+      subtitle
       _rawBody
     }
   }
@@ -55,7 +56,7 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
-  const {title, _rawBody} = (data || {}).sanityHomePage
+  const {title, _rawBody, subtitle} = (data || {}).sanityHomePage
 
   if (!site) {
     throw new Error(
@@ -73,7 +74,8 @@ const IndexPage = props => {
       <Container>
         <h1 hidden>Welcome to {site.title}</h1>
         <h1>{title}</h1>
-        {_rawBody && <PortableText blocks={_rawBody} />}
+        <h2>{subtitle}</h2>
+        {/* {_rawBody && <PortableText blocks={_rawBody} />} */}
       </Container>
     </Layout>
   )

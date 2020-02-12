@@ -10,6 +10,12 @@ export default {
       description: 'Titles should be catchy, descriptive, and not too long'
     },
     {
+      name: 'subtitle',
+      type: 'string',
+      title: 'Subtitle',
+      description: 'Likely the year (i.e., 2030)'
+    },
+    {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
