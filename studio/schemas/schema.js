@@ -14,9 +14,12 @@ import siteSettings from './documents/siteSettings'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
+import slidePortableText from './objects/slidePortableText'
+import question from './objects/question'
 import bioPortableText from './objects/bioPortableText'
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
+import contextSlide from './objects/contextSlide'
 import authorReference from './objects/authorReference'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -35,8 +38,11 @@ export default createSchema({
     category,
     author,
     mainImage,
+    contextSlide,
     authorReference,
     bodyPortableText,
+    slidePortableText,
+    question,
     bioPortableText,
     excerptPortableText
 
