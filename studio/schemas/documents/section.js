@@ -10,6 +10,11 @@ export default {
       description: 'Titles should be catchy, descriptive, and not too long'
     },
     {
+      name: 'slug',
+      type: 'slug',
+      title: 'Slug'
+    },
+    {
       name: 'order',
       type: 'number',
       title: 'Order',
