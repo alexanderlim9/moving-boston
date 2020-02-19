@@ -10,10 +10,69 @@ export default {
       description: 'Titles should be catchy, descriptive, and not too long'
     },
     {
+      name: 'year',
+      type: 'string',
+      title: 'Year',
+    },
+    {
       name: 'subtitle',
       type: 'string',
       title: 'Subtitle',
-      description: 'Likely the year (i.e., 2030)'
+    },
+    {
+      name: 'heroImage',
+      type: 'mainImage',
+      title: 'Hero Image'
+    },
+    {
+      name: 'secTwoTitle',
+      type: 'string',
+      title: 'Section 2 Title',
+    },
+    {
+      name: 'secTwoBody',
+      type: 'bodyPortableText',
+      title: 'Section 2 Body'
+    },
+    {
+      name: 'secTwoImage',
+      type: 'mainImage',
+      title: 'Section 2 Image '
+    },
+    {
+      name: 'secTwoCTA',
+      type: 'string',
+      title: 'Section 2 CTA Title',
+    },
+    {
+      name: 'secThreeTitle',
+      type: 'string',
+      title: 'Section 3 Title',
+    },
+    {
+      name: 'secThreeBody',
+      type: 'bodyPortableText',
+      title: 'Section 3 Body'
+    },
+    {
+      name: 'secThreeImage',
+      type: 'mainImage',
+      title: 'Section 3 Image '
+    },
+    {
+      name: 'secThreeCTA',
+      type: 'string',
+      title: 'Section 3 CTA Title',
+    },
+    {
+      name: 'mainImage',
+      type: 'mainImage',
+      title: 'Main image'
+    },
+    {
+      name: 'body',
+      type: 'bodyPortableText',
+      title: 'Body'
     },
     {
       name: 'slug',
@@ -25,15 +84,5 @@ export default {
         maxLength: 96
       }
     },
-    {
-      name: 'mainImage',
-      type: 'mainImage',
-      title: 'Main image'
-    },
-    {
-      name: 'body',
-      type: 'bodyPortableText',
-      title: 'Body'
-    }
   ]
 }

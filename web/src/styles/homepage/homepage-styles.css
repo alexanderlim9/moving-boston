@@ -1,0 +1,61 @@
+.hphero {
+  position: relative;
+  background-color: #3A71FF;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.hphero__text-container {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 10px #00000057;
+}
+
+.hphero__title {
+  margin: 0;
+  color: white;
+  font-size: 130px;
+  display: inline-block;
+}
+
+.hphero__year {
+  margin: 10px;
+  color: white;
+  font-size: 40px;
+  display: inline-block;
+}
+
+.hphero__cta {
+  /* position: absolute; */
+  bottom: 40px;
+  right: 40px;
+  border: 2px solid white;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  padding: 10px 80px;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: none;
+  transition: background-color 200ms, color 200ms;
+}
+
+.hphero__cta::after {
+  margin-left: 15px;
+  content: "→";
+}
+
+.hphero__cta:hover {
+  background-color: #3A71FF;
+  color: white;
+}
+
+
