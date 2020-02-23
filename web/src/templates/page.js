@@ -12,14 +12,17 @@ export const query = graphql`
     page: sanitySection(id: {eq: $id}) {
       id
       title
-      _rawSlides
+      question {
+        description
+        title
+      }
     }
   }
 `
 
 const PageTemplate = props => {
   const {data, errors} = props
-  const page = data && data.page
+  const {page, question} = data && data.page
   return (
     <Layout>
       {errors && <SEO title='GraphQL Error' />}
@@ -32,6 +35,7 @@ const PageTemplate = props => {
       )}
 
       {page && <BlogPost {...page} />}
+      {/* {question.title} */}
     </Layout>
   )
 }

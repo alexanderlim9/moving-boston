@@ -46,7 +46,7 @@ async function createBlogPostPages (graphql, actions) {
     })
 }
 
-async function createSurveyPages (graphql, actions) {
+async function createSectionPages (graphql, actions) {
   const {createPage} = actions
   const result = await graphql(`
     {
@@ -59,7 +59,14 @@ async function createSurveyPages (graphql, actions) {
               current
             }
             order
-            _rawSlides
+            question {
+              id
+              title
+              slug {
+                current
+              }
+              description
+            }
           }
         }
       }
@@ -72,18 +79,22 @@ async function createSurveyPages (graphql, actions) {
 
   postEdges
     .forEach((edge, index) => {
-      const {id, slug = {}, order} = edge.node
-      const path = `/${slug.current}/${order}/`
+      const {id, slug = {}, order, question} = edge.node
+      const pathSection = `/${slug.current}`
 
-      createPage({
-        path,
-        component: require.resolve('./src/templates/page.js'),
-        context: {id}
+      question.forEach((q, index) => {
+        const pathQuestion = `/${q.slug.current}/`
+        const path = pathSection + pathQuestion
+        createPage({
+          path,
+          component: require.resolve('./src/templates/page.js'),
+          context: {id}
+        })
       })
     })
 }
 
 exports.createPages = async ({graphql, actions}) => {
   await createBlogPostPages(graphql, actions)
-  await createSurveyPages(graphql, actions)
+  await createSectionPages(graphql, actions)
 }
