@@ -91,17 +91,19 @@ const IndexPage = props => {
   }
 
   return (
-    <div className="homepage">
-      <div
-        style={{ backgroundImage: `url(${hpdata.heroImage.asset.url})` }}
-        alt={hpdata.heroImage.alt}
-        className="hphero"
-      >
-        <h1 hidden>Welcome to {site.title}</h1>
-        <HPHero title={hpdata.title} year={hpdata.year} />
+    <Layout>
+      <div className="homepage">
+        <div
+          style={{ backgroundImage: `url(${hpdata.heroImage.asset.url})` }}
+          alt={hpdata.heroImage.alt}
+          className="hphero"
+        >
+          <h1 hidden>Welcome to {site.title}</h1>
+          <HPHero title={hpdata.title} year={hpdata.year} />
+        </div>
+        {/* {_rawBody && <PortableText blocks={_rawBody} />} */}
       </div>
-      {/* {_rawBody && <PortableText blocks={_rawBody} />} */}
-    </div>
+    </Layout>
   );
 };
 

@@ -1,5 +1,17 @@
 @import './custom-properties.css';
 
+@font-face {
+  font-family: 'TitlingGothic';
+  src:  url(../fonts//TitlingGothicFBWideMedium.ttf) format('truetype');
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: 'TitlingGothic';
+  src:  url(../fonts//TitlingGothicFBWideBold.ttf) format('truetype');
+  font-weight: bold;
+}
+
 html {
   font-family: var(--font-family-sans);
   font-size: var(--font-base-size);
