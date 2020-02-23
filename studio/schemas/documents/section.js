@@ -21,6 +21,19 @@ export default {
       description: 'The order that this section should appear in the narrative (e.g. 1, 2, 3).'
     },
     {
+      name: 'question',
+      type: 'array',
+      title: 'Question',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'question'
+          }
+        }
+      ]
+    },
+    {
       name: 'slides',
       type: 'slidePortableText',
       title: 'Slides'

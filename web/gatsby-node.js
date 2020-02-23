@@ -71,7 +71,6 @@ async function createSurveyPages (graphql, actions) {
   const postEdges = (result.data.allSanitySection || {}).edges || []
 
   postEdges
-    .filter(edge => !isFuture(edge.node.publishedAt))
     .forEach((edge, index) => {
       const {id, slug = {}, order} = edge.node
       const path = `/${slug.current}/${order}/`

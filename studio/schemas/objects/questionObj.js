@@ -1,5 +1,5 @@
 export default {
-    name: 'question',
+    name: 'questionObj',
     type: 'object',
     title: 'Question',
     fields: [

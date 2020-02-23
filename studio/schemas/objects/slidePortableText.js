@@ -41,7 +41,7 @@ export default {
         ]
       },
       // of: [{type: 'authorReference'}],
-      of: [{type: 'question'}]
+      of: [{type: 'questionObj'}]
     },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
