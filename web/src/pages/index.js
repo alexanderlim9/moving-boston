@@ -1,10 +1,16 @@
-import React from 'react'
-import {graphql} from 'gatsby'
-import PortableText from '../components/portableText'
-import Container from '../components/container'
-import GraphQLErrorList from '../components/graphql-error-list'
-import SEO from '../components/seo'
-import Layout from '../containers/layout'
+import React from "react";
+import { graphql } from "gatsby";
+import PortableText from "../components/portableText";
+import Container from "../components/container";
+import GraphQLErrorList from "../components/graphql-error-list";
+import SEO from "../components/seo";
+import Layout from "../containers/layout";
+import { HPHero } from "../components/homepage/hero";
+
+import "../styles/homepage/homepage-styles.css";
+
+import { buildImageObj } from "../lib/helpers";
+import { imageUrlFor } from "../lib/image-url";
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -34,51 +40,71 @@ export const query = graphql`
       title
       description
       keywords
-    },
+    }
     sanityHomePage {
       _id
       title
-      subtitle
       _rawBody
+      slug {
+        current
+      }
+      subtitle
+      year
+      secTwoTitle
+      _rawSecTwoBody
+      secTwoCTA
+      secThreeTitle
+      _rawSecThreeBody
+      secThreeCTA
+      _rawHeroImage
+      heroImage {
+        asset {
+          url
+        }
+        alt
+      }
     }
   }
-`
+`;
 
 const IndexPage = props => {
-  const {data, errors} = props
+  const { data, errors } = props;
 
   if (errors) {
     return (
       <Layout>
         <GraphQLErrorList errors={errors} />
       </Layout>
-    )
+    );
   }
 
-  const site = (data || {}).site
-  const {title, _rawBody, subtitle} = (data || {}).sanityHomePage
+  const site = (data || {}).site;
+  const { title, _rawBody, subtitle } = (data || {}).sanityHomePage;
+  const hpdata = (data || {}).sanityHomePage;
+  console.log(hpdata);
+  // console.log(imageUrlFor(buildImageObj(hpdata._rawHeroImage)))
 
   if (!site) {
     throw new Error(
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
-    )
+    );
   }
 
   return (
     <Layout>
-      <SEO
-        title={site.title}
-        description={site.description}
-        keywords={site.keywords}
-      />
-      <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
-        <h1>{title}</h1>
-        <h2>{subtitle}</h2>
+      <div className="homepage">
+        <div
+          style={{ backgroundImage: `url(${hpdata.heroImage.asset.url})` }}
+          alt={hpdata.heroImage.alt}
+          className="hphero"
+        >
+          <h1 hidden>Welcome to {site.title}</h1>
+          <HPHero title={hpdata.title} year={hpdata.year} />
+        </div>
         {/* {_rawBody && <PortableText blocks={_rawBody} />} */}
-      </Container>
+      </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
