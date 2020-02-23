@@ -1,0 +1,15 @@
+.today {
+  padding: 30px 80px;
+}
+
+.today__description {
+  font-family: 'UniversLTStd', sans-serif;
+  font-weight: 500;
+}
+
+.today__image {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}

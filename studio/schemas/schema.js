@@ -12,6 +12,8 @@ import post from './documents/post'
 import section from './documents/section'
 import homePage from './documents/home-page'
 import siteSettings from './documents/siteSettings'
+import today from './documents/today'
+import todayImage from './documents/todayImage'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -36,6 +38,8 @@ export default createSchema({
     homePage,
     post,
     section,
+    today,
+    todayImage,
     category,
     question,
     author,

@@ -32,7 +32,7 @@ export const Menu = props => {
             </li>
 
             <li>
-              <Link to="/">Facts</Link>
+              <Link to='/today/'>Facts</Link>
             </li>
 
             <li>

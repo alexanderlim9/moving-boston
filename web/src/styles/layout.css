@@ -2,13 +2,19 @@
 
 @font-face {
   font-family: 'TitlingGothic';
-  src:  url(../fonts//TitlingGothicFBWideMedium.ttf) format('truetype');
+  src:  url(../fonts/TitlingGothicFBWideMedium.ttf) format('truetype');
   font-weight: medium;
 }
 
 @font-face {
   font-family: 'TitlingGothic';
-  src:  url(../fonts//TitlingGothicFBWideBold.ttf) format('truetype');
+  src:  url(../fonts/TitlingGothicFBWideBold.ttf) format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'UniversLTStd';
+  src: url(../fonts/UniversLTStd-BoldEx.otf) format('opentype');
   font-weight: bold;
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import PortableText from "../components/portableText";
 import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
@@ -53,10 +53,16 @@ export const query = graphql`
       secTwoTitle
       _rawSecTwoBody
       secTwoCTA
+      secTwoImage {
+        asset {
+          url
+        }
+        alt
+      }
       secThreeTitle
       _rawSecThreeBody
       secThreeCTA
-      _rawHeroImage
+      secThreeSecondaryCTA
       heroImage {
         asset {
           url
@@ -79,7 +85,6 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site;
-  const { title, _rawBody, subtitle } = (data || {}).sanityHomePage;
   const hpdata = (data || {}).sanityHomePage;
   console.log(hpdata);
   // console.log(imageUrlFor(buildImageObj(hpdata._rawHeroImage)))
@@ -100,8 +105,36 @@ const IndexPage = props => {
         >
           <h1 hidden>Welcome to {site.title}</h1>
           <HPHero title={hpdata.title} year={hpdata.year} />
+          <div className={"hp__cta-section"}></div>
         </div>
-        {/* {_rawBody && <PortableText blocks={_rawBody} />} */}
+        <div className={"hp__block hp__introduction"}>
+          <div className={"hp__introduction__title"}>{hpdata.secTwoTitle}</div>
+          <div className={"hp__block__lower-container"}>
+            <img src={hpdata.secTwoImage.asset.url} className={"hp__lower-container__image"} />
+            <div className={"hp__lower-container__text-cta"}>
+              {hpdata._rawSecTwoBody && <PortableText blocks={hpdata._rawSecTwoBody} />}
+              <Link to={"/today/"} className={"hp__lower-container__cta"}>
+                {hpdata.secTwoCTA}
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className={"hp__block  hp__facts"}>
+          <div className={"hp__facts__title"}>{hpdata.secThreeTitle}</div>
+          <div className={"hp__block__lower-container"}>
+            <div className={"hp__facts__cta-container"}>
+              <Link to={"/today/"} className={"hp__lower-container__cta"}>
+                {hpdata.secThreeCTA}
+              </Link>
+              <Link to={"/today/"} className={"hp__lower-container__cta"}>
+                {hpdata.secThreeSecondaryCTA}
+              </Link>
+            </div>
+            <div className={"hp__facts__text"}>
+              {hpdata._rawSecTwoBody && <PortableText blocks={hpdata._rawSecThreeBody} />}
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );

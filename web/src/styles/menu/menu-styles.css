@@ -50,6 +50,7 @@
 .overlay__container a {
   color: transparent;
   font-size: 3em;
+  letter-spacing: .125em;
   -webkit-text-fill-color: #ffffff00;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
