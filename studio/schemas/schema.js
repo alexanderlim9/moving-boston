@@ -8,6 +8,9 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import author from './documents/author'
 import category from './documents/category'
 import question from './documents/question'
+import question1 from './documents/question1'
+import question2 from './documents/question2'
+import question3 from './documents/question3'
 import post from './documents/post'
 import section from './documents/section'
 import homePage from './documents/home-page'
@@ -42,6 +45,9 @@ export default createSchema({
     todayImage,
     category,
     question,
+    question1,
+    question2,
+    question3,
     author,
     mainImage,
     contextSlide,
