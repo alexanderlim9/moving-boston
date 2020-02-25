@@ -8,6 +8,7 @@ import Layout from "../containers/layout";
 import { HPHero } from "../components/homepage/hero";
 
 import "../styles/homepage/homepage-styles.css";
+import "../styles/homepage/homepage-lower-block-styles.css";
 
 import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
@@ -108,11 +109,13 @@ const IndexPage = props => {
           <div className={"hp__cta-section"}></div>
         </div>
         <div className={"hp__block hp__introduction"}>
-          <div className={"hp__introduction__title"}>{hpdata.secTwoTitle}</div>
+          <div className={"hp__block__title"}>{hpdata.secTwoTitle}</div>
           <div className={"hp__block__lower-container"}>
             <img src={hpdata.secTwoImage.asset.url} className={"hp__lower-container__image"} />
             <div className={"hp__lower-container__text-cta"}>
-              {hpdata._rawSecTwoBody && <PortableText blocks={hpdata._rawSecTwoBody} />}
+              <div className={"hp__block__text"}>
+                {hpdata._rawSecTwoBody && <PortableText blocks={hpdata._rawSecTwoBody} />}
+              </div>
               <Link to={"/today/"} className={"hp__lower-container__cta"}>
                 {hpdata.secTwoCTA}
               </Link>
@@ -120,7 +123,7 @@ const IndexPage = props => {
           </div>
         </div>
         <div className={"hp__block  hp__facts"}>
-          <div className={"hp__facts__title"}>{hpdata.secThreeTitle}</div>
+          <div className={"hp__block__title"}>{hpdata.secThreeTitle}</div>
           <div className={"hp__block__lower-container"}>
             <div className={"hp__facts__cta-container"}>
               <Link to={"/today/"} className={"hp__lower-container__cta"}>
@@ -130,7 +133,7 @@ const IndexPage = props => {
                 {hpdata.secThreeSecondaryCTA}
               </Link>
             </div>
-            <div className={"hp__facts__text"}>
+            <div className={"hp__block__text hp__facts__text"}>
               {hpdata._rawSecTwoBody && <PortableText blocks={hpdata._rawSecThreeBody} />}
             </div>
           </div>

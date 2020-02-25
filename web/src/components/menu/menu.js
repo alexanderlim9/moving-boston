@@ -11,7 +11,7 @@ export const Menu = props => {
   return (
     <div className="menu">
       <div className="menu__icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        <Icon strokeColor={isMenuOpen ? 'white' : 'black'} symbol={isMenuOpen ? "close" : "hamburger"} />
+        <Icon strokeColor={'black'} symbol={isMenuOpen ? "close" : "hamburger"} />
       </div>
 
       <div

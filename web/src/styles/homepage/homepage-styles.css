@@ -67,14 +67,3 @@
   color: white;
 }
 
-.hp__block {
-  display: flex;
-  flex-direction: column;
-}
-
-.hp__block__lower-container {
-  display: flex;
-  flex-direction: row;
-}
-
-
