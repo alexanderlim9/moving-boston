@@ -1,0 +1,15 @@
+.qintro,
+.qcontent {
+  transition: opacity 200ms;
+}
+
+.qintro--hidden,
+.qcontent--hidden {
+  opacity: 0;
+  z-index: -1;
+}
+
+.qintro--shown,
+.qcontent--shown {
+  opacity: 1;
+}

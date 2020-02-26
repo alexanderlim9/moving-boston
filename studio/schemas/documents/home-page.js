@@ -65,6 +65,11 @@ export default {
       title: 'Section 3 CTA Title',
     },
     {
+      name: 'secThreeSecondaryCTA',
+      type: 'string',
+      title: 'Section 3 Secondary CTA Title',
+    },
+    {
       name: 'mainImage',
       type: 'mainImage',
       title: 'Main image'

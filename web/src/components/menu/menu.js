@@ -11,7 +11,7 @@ export const Menu = props => {
   return (
     <div className="menu">
       <div className="menu__icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        <Icon strokeColor={isMenuOpen ? 'white' : 'black'} symbol={isMenuOpen ? "close" : "hamburger"} />
+        <Icon strokeColor={'black'} symbol={isMenuOpen ? "close" : "hamburger"} />
       </div>
 
       <div
@@ -32,7 +32,7 @@ export const Menu = props => {
             </li>
 
             <li>
-              <Link to="/">Facts</Link>
+              <Link to='/today/'>Facts</Link>
             </li>
 
             <li>

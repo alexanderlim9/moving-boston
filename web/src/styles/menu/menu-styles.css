@@ -6,10 +6,18 @@
 .menu__icon {
   width: 20px;
   height: 20px;
-  position: absolute;
+  position: fixed;
   top: 25px;
   right: 75px;
   z-index: 1;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px #0000005b;
+}
+
+.menu__icon:hover {
+  cursor: pointer;
 }
 
 .menu__overlay {
@@ -50,6 +58,7 @@
 .overlay__container a {
   color: transparent;
   font-size: 3em;
+  letter-spacing: .125em;
   -webkit-text-fill-color: #ffffff00;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
