@@ -6,7 +6,7 @@ import "./frequency-styles.css";
 const Frequency = props => {
   console.log(props.options);
   return (
-    <div>
+    <div className="frequency">
       <ul>
         {Object.keys(props.options).map((element, index) => {
           return (
@@ -31,15 +31,15 @@ const FrequencyItem = props => {
   console.log(props.currentSelectedAnswerOption);
 
   return (
-    <div>
+    <div className="frequency-item">
       {props.optionName}
       {props.answerOptions.map((element, index) => {
         return (
           <div
-            className={`frequency-item ${
+            className={`frequency-item__option${
               props.currentSelectedAnswerOption === element
-                ? "frequency-item--selected"
-                : "frequency-item--not-selected"
+                ? "frequency-item__option--selected"
+                : "frequency-item__option--not-selected"
             }`}
             onClick={() => props.setSpecificCallback(element)}
           >
