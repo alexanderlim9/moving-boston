@@ -6,7 +6,7 @@ export const HPHero = props => {
     <div className="hphero__text-container">
       <h1 className="hphero__title">{props.title}</h1>
       <h2 className="hphero__year">{props.year}</h2>
-      <Link className="hphero__cta" to="/">Let's go</Link>
+      <Link className="hphero__cta" to="/questions/questionone/">Let's go</Link>
     </div>
   );
 };

@@ -1,0 +1,38 @@
+.qcontainer {
+  padding: 60px 80px;
+  background-color: #3A71FF;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.qintro,
+.qcontent {
+  transition: opacity 200ms;
+}
+
+.qintro--hidden,
+.qcontent--hidden {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.qintro--shown,
+.qcontent--shown {
+  opacity: 1;
+  z-index: 1;
+}
+
+.qintro__description {
+  font-family: 'TitlingGothic', sans-serif;
+	font-size: 2.5em;
+  padding-bottom: 40px;
+  width: 750px;
+}
+
+.qintro__cta {
+  font-family: 'TitlingGothic', sans-serif;
+	font-size: 1.5em;
+	padding-bottom: 40px;
+}

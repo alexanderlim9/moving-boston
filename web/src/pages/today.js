@@ -1,16 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
-import PortableText from "../components/portableText";
-import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
-import { HPHero } from "../components/homepage/hero";
 
 import "../styles/today/today-styles.css";
-
-import { buildImageObj } from "../lib/helpers";
-import { imageUrlFor } from "../lib/image-url";
 
 export const query = graphql`
   query TodayPageQuery {
@@ -83,15 +77,6 @@ const TodayPage = props => {
             )
           })}
         </div>
-        {/* <div
-          style={{ backgroundImage: `url(${hpdata.heroImage.asset.url})` }}
-          alt={hpdata.heroImage.alt}
-          className="hphero"
-        >
-          <h1 hidden>Welcome to {site.title}</h1>
-          <HPHero title={hpdata.title} year={hpdata.year} />
-        </div>
-        {/* {_rawBody && <PortableText blocks={_rawBody} />} */}
       </div>
     </Layout>
   );

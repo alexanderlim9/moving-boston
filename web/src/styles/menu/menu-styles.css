@@ -16,6 +16,10 @@
   box-shadow: 3px 3px 5px #0000005b;
 }
 
+.menu__icon:hover {
+  cursor: pointer;
+}
+
 .menu__overlay {
   transition: opacity 300ms;
   width: 100%;
