@@ -14,9 +14,9 @@ export default {
         title: 'Slug'
       },
       {
-        name: 'description',
+        name: 'question',
         type: 'text',
-        title: 'Description'
+        title: 'Question'
       }
     ]
   }

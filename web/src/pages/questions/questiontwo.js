@@ -4,30 +4,26 @@ import GraphQLErrorList from "../../components/graphql-error-list";
 import SEO from "../../components/seo";
 import Layout from "../../containers/layout";
 
-import "../../styles/questions/question-one-styles.css";
+import "../../styles/questions/question-two-styles.css";
 import "../../styles/questions/question-general-styles.css";
 import Frequency from "../../components/questioncomponents/frequency/frequency";
+import { Link } from "@reach/router";
 
 export const query = graphql`
-  query QuestionOneQuery {
+  query QuestionTwoQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
       keywords
     }
 
-    sanityQuestion1 {
-      introNextTitle
-      introNextDescription
-      slug {
-        current
-      }
-      title
+    sanityQuestion2 {
+      question
     }
   }
 `;
 
-const QuestionOne = props => {
+const QuestionTwo = props => {
   const { data, errors } = props;
 
   if (errors) {
@@ -39,8 +35,8 @@ const QuestionOne = props => {
   }
 
   const site = (data || {}).site;
-  const qoneData = (data || {}).sanityQuestion1;
-  console.log(qoneData);
+  const qtwoData = (data || {}).sanityQuestion2;
+  console.log(qtwoData);
 
   if (!site) {
     throw new Error(
@@ -49,38 +45,16 @@ const QuestionOne = props => {
   }
 
   const [isOnIntro, setIsOnIntro] = useState(true);
-  const [answerOptions, setAnswerOptions] = useState([
-    "Never",
-    "Sometimes",
-    "Most of the time",
-    "Always"
-  ]);
-  const [options, setOptions] = useState({
-    Train: { image: null, selectedValue: null },
-    Bus: { image: null, selectedValue: null },
-    T: { image: null, selectedValue: null },
-    Car: { image: null, selectedValue: null },
-    Bike: { image: null, selectedValue: null },
-    Walk: { image: null, selectedValue: null },
-    Ferry: { image: null, selectedValue: null },
-    Rideshare: { image: null, selectedValue: null },
-    Scooter: { image: null, selectedValue: null }
-  });
-
-  const setSpecificOption = (opt, value) => {
-    setOptions({
-      ...options,
-      [opt]: {
-        image: opt.image,
-        selectedValue: value
-      }
-    });
-  };
 
   return (
     <Layout>
       <div className="qcontainer">
-        <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`}>
+        <div className="qintro__description">{qtwoData.question}</div>
+        <textarea />
+        <Link to={"/questionthree/"} className="qintro__cta">
+          next
+        </Link>
+        {/* <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`}>
           <div className="qintro__description">{qoneData.introNextDescription}</div>
           <div className="qintro__cta" onClick={() => setIsOnIntro(false)}>
             {qoneData.introNextTitle}
@@ -94,10 +68,10 @@ const QuestionOne = props => {
             options={options}
             answerOptions={answerOptions}
           />
-        </div>
+        </div> */}
       </div>
     </Layout>
   );
 };
 
-export default QuestionOne;
+export default QuestionTwo;
