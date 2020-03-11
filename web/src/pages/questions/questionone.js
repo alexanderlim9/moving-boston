@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import GraphQLErrorList from "../../components/graphql-error-list";
 import SEO from "../../components/seo";
 import Layout from "../../containers/layout";
-
+import { Link } from "@reach/router";
 import "../../styles/questions/question-one-styles.css";
 import "../../styles/questions/question-general-styles.css";
 import Frequency from "../../components/questioncomponents/frequency/frequency";
@@ -94,6 +94,9 @@ const QuestionOne = props => {
             options={options}
             answerOptions={answerOptions}
           />
+          <Link to={"/questions/questiontwo/"} className="qintro__cta">
+            next
+          </Link>
         </div>
       </div>
     </Layout>

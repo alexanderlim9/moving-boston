@@ -51,7 +51,7 @@ const QuestionTwo = props => {
       <div className="qcontainer">
         <div className="qintro__description">{qtwoData.question}</div>
         <textarea />
-        <Link to={"/questionthree/"} className="qintro__cta">
+        <Link to={"questions/questionthree/"} className="qintro__cta">
           next
         </Link>
         {/* <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`}>
