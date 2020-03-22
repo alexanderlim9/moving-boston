@@ -50,7 +50,9 @@ const QuestionTwo = props => {
     <Layout>
       <div className="qcontainer">
         <div className="qintro__description">{qtwoData.question}</div>
-        <textarea />
+        <textarea 
+          className="qtwo__frq"
+          placeholder={"What are some of your biggest frustrations?"}/>
         <Link to={"questions/questionthree/"} className="qintro__cta">
           next
         </Link>
