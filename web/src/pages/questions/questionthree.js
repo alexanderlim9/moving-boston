@@ -68,13 +68,15 @@ const QuestionThree = props => {
           
         </div>
 
-        <Slider/>
-        <Slider/>
-
-        <Slider/>
-
-        <Slider/>
-
+        <Slider
+          sliderTitle="Autonomous Vehicles"
+        />
+        <Slider
+          sliderTitle="Cable Cars"
+        />
+        <Slider
+          sliderTitle="Trackless Trains"
+        />
       </div>
     </Layout>
   );

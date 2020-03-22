@@ -1,5 +1,15 @@
-.slidecontainer {
+.slider-container {
 width: 100%; /* Width of the outside container */
+margin: 50px auto;
+font-family: 'UniversLTStd', sans-serif;
+font-weight: 600;
+}
+
+.slider-labels {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+font-size: .8em;
 }
 
 .slider {
@@ -19,6 +29,7 @@ transition: opacity .2s; */
 opacity: 1; /* Fully shown on mouse-over */
 }
 
+/* The circle to drag */
 .slider::-webkit-slider-thumb {
 -webkit-appearance: none;
 appearance: none;
