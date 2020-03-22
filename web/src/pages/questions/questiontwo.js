@@ -6,7 +6,6 @@ import Layout from "../../containers/layout";
 
 import "../../styles/questions/question-two-styles.css";
 import "../../styles/questions/question-general-styles.css";
-import Frequency from "../../components/questioncomponents/frequency/frequency";
 import { Link } from "@reach/router";
 
 export const query = graphql`
@@ -50,12 +49,18 @@ const QuestionTwo = props => {
     <Layout>
       <div className="qcontainer">
         <div className="qintro__description">{qtwoData.question}</div>
-        <textarea 
+        <textarea
           className="qtwo__frq"
-          placeholder={"What are some of your biggest frustrations?"}/>
-        <Link to={"questions/questionthree/"} className="qintro__cta">
-          next
-        </Link>
+          placeholder={"What are some of your biggest frustrations?"}
+        />
+        <div className="qnextprev">
+          <Link to={"questions/questionone/"} className="qprevquestion">
+            Previous Question
+          </Link>
+          <Link to={"questions/questionthree/"} className="qnextquestion">
+            Next Question
+          </Link>
+        </div>
         {/* <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`}>
           <div className="qintro__description">{qoneData.introNextDescription}</div>
           <div className="qintro__cta" onClick={() => setIsOnIntro(false)}>
