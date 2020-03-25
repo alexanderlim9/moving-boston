@@ -94,9 +94,11 @@ const QuestionOne = props => {
             options={options}
             answerOptions={answerOptions}
           />
-          <Link to={"/questions/questiontwo/"} className="qintro__cta">
-            next
-          </Link>
+          <div className="qnextprev">
+            <Link to={"questions/questiontwo/"} className="qnextquestion">
+              Next Question
+            </Link>
+          </div>
         </div>
       </div>
     </Layout>
