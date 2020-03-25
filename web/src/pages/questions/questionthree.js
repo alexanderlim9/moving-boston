@@ -7,7 +7,7 @@ import Layout from "../../containers/layout";
 import "../../styles/questions/question-three-styles.css";
 import "../../styles/questions/question-general-styles.css";
 import Slider from "../../components/questioncomponents/slider/slider";
-
+import { Link } from "@reach/router";
 
 export const query = graphql`
   query QuestionThreeQuery {
@@ -77,6 +77,14 @@ const QuestionThree = props => {
         <Slider
           sliderTitle="Trackless Trains"
         />
+        <div className="qnextprev">
+          <Link to={"questions/questionone/"} className="qprevquestion">
+            Previous Question
+          </Link>
+          <Link to={"today/"} className="qnextquestion">
+            Next
+          </Link>
+        </div>
       </div>
     </Layout>
   );
