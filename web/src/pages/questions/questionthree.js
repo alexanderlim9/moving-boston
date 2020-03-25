@@ -6,8 +6,7 @@ import Layout from "../../containers/layout";
 
 import "../../styles/questions/question-three-styles.css";
 import "../../styles/questions/question-general-styles.css";
-// import Slider from "../../components/questioncomponents/slider/slider";
-import { Slider, Switch } from 'antd';
+import Slider from "../../components/questioncomponents/slider/slider";
 
 
 export const query = graphql`
@@ -66,10 +65,18 @@ const QuestionThree = props => {
           <div className="qintro__description">{qthreeData.introNextTitle}</div>
 
           <div className="qintro__cta" onClick={() => setIsOnIntro(true)}>debug back</div>
-          <div>
-            <Slider defaultValue={30}/>
-          </div>
+          
         </div>
+
+        <Slider
+          sliderTitle="Autonomous Vehicles"
+        />
+        <Slider
+          sliderTitle="Cable Cars"
+        />
+        <Slider
+          sliderTitle="Trackless Trains"
+        />
       </div>
     </Layout>
   );
