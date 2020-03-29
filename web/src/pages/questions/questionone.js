@@ -83,6 +83,10 @@ const QuestionOne = props => {
   return (
     <Layout>
       <div className="qcontainer">
+        <div className="qintro">
+          <div className="qintro__description sequential">{qoneData.introText1}</div>
+          <div className="qintro__description sequential">{qoneData.introText2}</div>
+        </div>
         <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`}>
           <div className="qintro__description">{qoneData.introText3}</div>
           <div className="qintro__cta" onClick={() => setIsOnIntro(false)}>
