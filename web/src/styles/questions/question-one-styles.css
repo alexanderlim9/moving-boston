@@ -1,4 +1,17 @@
-.sequential:nth-child(1):after {
+.sequential-intro {
+    opacity: 1;
+    animation: disappear 100ms forwards;
+    animation-delay: 7s;
+}
+
+@keyframes disappear {
+    to {
+		opacity: 0;
+	}
+}
+/*------------------------*/
+
+.sequential-child:nth-child(1):after {
     width: 0px;
     overflow: hidden;
     display: inline-block;
@@ -23,7 +36,7 @@
 
 /*------------------------*/
 
-.sequential:nth-child(2) {
+.sequential-child:nth-child(2) {
     opacity: 0;
     animation: appear 100ms forwards;
     animation-delay: 4s;
