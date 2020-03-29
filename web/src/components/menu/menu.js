@@ -28,7 +28,7 @@ export const Menu = props => {
             </li>
 
             <li>
-              <Link to="/">Survey</Link>
+              <Link to="/questions/questionone">Survey</Link>
             </li>
 
             <li>

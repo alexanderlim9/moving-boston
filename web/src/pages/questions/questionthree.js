@@ -57,33 +57,23 @@ const QuestionThree = props => {
         <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`}>
           <div className="qintro__description">{qthreeData.introNextDescription}</div>
           <div className="qintro__cta" onClick={() => setIsOnIntro(false)}>
-            {qthreeData.introNextTitle}
+          <div className="qnextlink">{qthreeData.introNextTitle}</div>
           </div>
         </div>
 
         <div className={`qcontent ${isOnIntro ? "qcontent--hidden" : "qcontent--shown"}`}>
           <div className="qintro__description">{qthreeData.introNextTitle}</div>
-
-          <div className="qintro__cta" onClick={() => setIsOnIntro(true)}>debug back</div>
-          
-        </div>
-
-        <Slider
-          sliderTitle="Autonomous Vehicles"
-        />
-        <Slider
-          sliderTitle="Cable Cars"
-        />
-        <Slider
-          sliderTitle="Trackless Trains"
-        />
-        <div className="qnextprev">
-          <Link to={"questions/questionone/"} className="qprevquestion">
-            Previous Question
-          </Link>
-          <Link to={"today/"} className="qnextquestion">
-            Next
-          </Link>
+          <Slider sliderTitle="Autonomous Vehicles" />
+          <Slider sliderTitle="Cable Cars" />
+          <Slider sliderTitle="Trackless Trains" />
+          <div className="qnextprev">
+            <Link to={"questions/questiontwo/"} className="qprevquestion">
+              Previous Question
+            </Link>
+            <Link to={"today/"} className="qnextquestion">
+              Next
+            </Link>
+          </div>
         </div>
       </div>
     </Layout>
