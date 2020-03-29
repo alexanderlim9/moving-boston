@@ -14,6 +14,7 @@ const Frequency = props => {
               <FrequencyItem
                 currentSelectedAnswerOption={props.options[element].selectedValue}
                 optionName={element}
+                optionImage={props.options[element].image}
                 answerOptions={props.answerOptions}
                 setSpecificCallback={value => props.setSpecificCallback(element, value)}
               />
@@ -43,6 +44,7 @@ const FrequencyItem = props => {
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="frequency-item__label-container">
+        <img className={"frequency-item__image"} src={props.optionImage} />
         <div className={`frequency-item__title`}>
           {props.optionName}{" "}
           {props.currentSelectedAnswerOption ? null : (

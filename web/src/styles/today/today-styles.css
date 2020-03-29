@@ -5,10 +5,18 @@
 .today__description {
   font-family: 'UniversLTStd', sans-serif;
   font-weight: 500;
+  font-size: 2em;
+  color: white;
+}
+
+.today__images-container {
+  display: flex;
+  justify-content: center;
 }
 
 .today__image {
-  width: 100%;
+  padding-top: 40px;
+  width: 80%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;

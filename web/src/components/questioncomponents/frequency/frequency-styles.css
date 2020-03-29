@@ -3,6 +3,10 @@
   font-weight: 600;
 }
 
+.frequency-item__image {
+  max-width: 50%;
+}
+
 .frequency__list {
   list-style-type: none;
   margin: 0;

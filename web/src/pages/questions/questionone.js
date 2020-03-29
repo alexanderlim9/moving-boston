@@ -56,22 +56,23 @@ const QuestionOne = props => {
     "Always"
   ]);
   const [options, setOptions] = useState({
-    Train: { image: null, selectedValue: null },
-    Bus: { image: null, selectedValue: null },
-    T: { image: null, selectedValue: null },
-    Car: { image: null, selectedValue: null },
-    Bike: { image: null, selectedValue: null },
-    Walk: { image: null, selectedValue: null },
-    Ferry: { image: null, selectedValue: null },
-    Rideshare: { image: null, selectedValue: null },
-    Scooter: { image: null, selectedValue: null }
+    Train: { image: require('../../assets/transporationmodes/train.png'), selectedValue: null },
+    Bus: { image: require('../../assets/transporationmodes/bus.png'), selectedValue: null },
+    T: { image: require('../../assets/transporationmodes/t.png'), selectedValue: null },
+    Car: { image: require('../../assets/transporationmodes/car.png'), selectedValue: null },
+    Bike: { image: require('../../assets/transporationmodes/bike.png'), selectedValue: null },
+    Walk: { image: require('../../assets/transporationmodes/walk.png'), selectedValue: null },
+    Ferry: { image: require('../../assets/transporationmodes/ferry.png'), selectedValue: null },
+    Rideshare: { image: require('../../assets/transporationmodes/rideshare.png'), selectedValue: null },
+    Scooter: { image: require('../../assets/transporationmodes/scooter.png'), selectedValue: null }
   });
 
   const setSpecificOption = (opt, value) => {
+    console.log("opt", opt.image);
     setOptions({
       ...options,
       [opt]: {
-        image: opt.image,
+        image: options[opt].image,
         selectedValue: value
       }
     });
@@ -83,7 +84,7 @@ const QuestionOne = props => {
         <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`}>
           <div className="qintro__description">{qoneData.introNextDescription}</div>
           <div className="qintro__cta" onClick={() => setIsOnIntro(false)}>
-            {qoneData.introNextTitle}
+            <div className="qnextlink">{qoneData.introNextTitle}</div>
           </div>
         </div>
 
@@ -95,7 +96,7 @@ const QuestionOne = props => {
             answerOptions={answerOptions}
           />
           <div className="qnextprev">
-            <Link to={"questions/questiontwo/"} className="qnextquestion">
+            <Link to={"questions/questiontwo/"} onClick={() => setIsOnIntro(false)}className="qbutton qnextquestion">
               Next Question
             </Link>
           </div>
