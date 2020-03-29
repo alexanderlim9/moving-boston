@@ -8,6 +8,7 @@ import "../../styles/questions/question-three-styles.css";
 import "../../styles/questions/question-general-styles.css";
 import Slider from "../../components/questioncomponents/slider/slider";
 import { Link } from "@reach/router";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export const query = graphql`
   query QuestionThreeQuery {
@@ -67,12 +68,12 @@ const QuestionThree = props => {
           <Slider sliderTitle="Cable Cars" />
           <Slider sliderTitle="Trackless Trains" />
           <div className="qnextprev">
-            <Link to={"questions/questiontwo/"} className="qprevquestion">
+            <AniLink paintDrip hex="#3A71FF" duration={.5}  to={"questions/questiontwo/"} className="qprevquestion">
               Previous Question
-            </Link>
-            <Link to={"today/"} className="qnextquestion">
+            </AniLink>
+            <AniLink paintDrip hex="#3A71FF" duration={.5} to={"today/"} className="qnextquestion">
               Next
-            </Link>
+            </AniLink>
           </div>
         </div>
       </div>
