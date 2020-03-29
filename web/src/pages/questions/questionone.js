@@ -17,8 +17,10 @@ export const query = graphql`
     }
 
     sanityQuestion1 {
-      introNextTitle
-      introNextDescription
+      introText1
+      introText2
+      introText3
+      question1
       slug {
         current
       }
@@ -82,14 +84,14 @@ const QuestionOne = props => {
     <Layout>
       <div className="qcontainer">
         <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`}>
-          <div className="qintro__description">{qoneData.introNextDescription}</div>
+          <div className="qintro__description">{qoneData.introText3}</div>
           <div className="qintro__cta" onClick={() => setIsOnIntro(false)}>
-            <div className="qnextlink">{qoneData.introNextTitle}</div>
+            <div className="qnextlink">{qoneData.question1}</div>
           </div>
         </div>
 
         <div className={`qcontent ${isOnIntro ? "qcontent--hidden" : "qcontent--shown"}`}>
-          <div className="qintro__description">{qoneData.introNextTitle}</div>
+          <div className="qintro__description">{qoneData.question1}</div>
           <Frequency
             setSpecificCallback={(opt, value) => setSpecificOption(opt, value)}
             options={options}
