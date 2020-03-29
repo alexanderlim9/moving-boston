@@ -1,0 +1,36 @@
+.sequential:nth-child(1):after {
+    width: 0px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4,end) 4s forwards;     
+    animation: ellipsis steps(4,end) 4s forwards;
+    animation-iteration-count: 1;
+    content: "\2026"; /* ascii code for the ellipsis character */
+  }
+  
+  @keyframes ellipsis {
+    to {
+      width: 1.8em;    
+    }
+  }
+  
+  @-webkit-keyframes ellipsis {
+    to {
+        width: 1.8em;    
+    }
+  }
+
+/*------------------------*/
+
+.sequential:nth-child(2) {
+    opacity: 0;
+    animation: appear 100ms forwards;
+    animation-delay: 4s;
+}
+
+@keyframes appear {
+    to {
+		opacity: 1;
+	}
+}
