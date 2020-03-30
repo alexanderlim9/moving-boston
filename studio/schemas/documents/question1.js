@@ -32,6 +32,12 @@ export default {
         title: 'Intro Text 3'
       },
       {
+        name: 'segueToQuestion',
+        description: 'Transition to the main question.',
+        type: 'text',
+        title: 'Segue to Question'
+      },
+      {
         name: 'question1',
         description: 'e.g., How will they get around?',
         type: 'string',
