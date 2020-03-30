@@ -4,8 +4,8 @@ import GraphQLErrorList from "../../components/graphql-error-list";
 import SEO from "../../components/seo";
 import Layout from "../../containers/layout";
 import { Link } from "@reach/router";
-import "../../styles/questions/question-one-styles.css";
 import "../../styles/questions/question-general-styles.css";
+import "../../styles/questions/question-one-styles.css";
 import Frequency from "../../components/questioncomponents/frequency/frequency";
 
 export const query = graphql`
@@ -20,6 +20,7 @@ export const query = graphql`
       introText1
       introText2
       introText3
+      segueToQuestion
       question1
       slug {
         current
@@ -50,7 +51,7 @@ const QuestionOne = props => {
     );
   }
 
-  const [isOnIntro, setIsOnIntro] = useState(true);
+  const [displayQuestion1, setDisplayQuestion1] = useState(false);
   const [answerOptions, setAnswerOptions] = useState([
     "Never",
     "Sometimes",
@@ -82,19 +83,22 @@ const QuestionOne = props => {
 
   return (
     <Layout>
+      
       <div className="qcontainer">
-        <div className="sequential-intro">
+        {/* Intro */}
+        <div className="sequential-intro-1">
           <div className="qintro__description sequential-child">{qoneData.introText1}</div>
           <div className="qintro__description sequential-child">{qoneData.introText2}</div>
         </div>
-        <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`} style={{visibility: 'hidden'}}>
+        <div className={`sequential-intro-2 ${!displayQuestion1 ? "qcontent--shown" : "qcontent--hidden"}`}>
           <div className="qintro__description">{qoneData.introText3}</div>
-          <div className="qintro__cta" onClick={() => setIsOnIntro(false)}>
-            <div className="qnextlink">{qoneData.question1}</div>
+          <div className="qintro__cta" onClick={() => setDisplayQuestion1(true)}>
+            <div className="qnextlink">{qoneData.segueToQuestion}</div>
           </div>
         </div>
 
-        <div className={`qcontent ${isOnIntro ? "qcontent--hidden" : "qcontent--shown"}`}>
+        {/* Question */}
+        <div className={`qcontent ${displayQuestion1 ? "qcontent--shown" : "qcontent--hidden"}`}>
           <div className="qintro__description">{qoneData.question1}</div>
           <Frequency
             setSpecificCallback={(opt, value) => setSpecificOption(opt, value)}
@@ -102,7 +106,7 @@ const QuestionOne = props => {
             answerOptions={answerOptions}
           />
           <div className="qnextprev">
-            <Link to={"questions/questiontwo/"} onClick={() => setIsOnIntro(false)}className="qbutton qnextquestion">
+            <Link to={"questions/questiontwo/"} onClick={() => setDisplayQuestion1(false)}className="qbutton qnextquestion">
               Next Question
             </Link>
           </div>

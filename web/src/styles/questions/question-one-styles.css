@@ -1,12 +1,14 @@
-.sequential-intro {
-    opacity: 1;
-    animation: disappear 100ms forwards;
+.sequential-intro-1 {
+    position:fixed;
+    z-index: 1;
+    animation: disappear 0s forwards;
     animation-delay: 7s;
 }
 
 @keyframes disappear {
     to {
-		opacity: 0;
+        visibility: hidden;
+        z-index: -1;
 	}
 }
 /*------------------------*/
@@ -46,4 +48,26 @@
     to {
 		opacity: 1;
 	}
+}
+
+/*------------------------*/
+
+.sequential-intro-2 {
+    position:fixed;
+    visibility: hidden;
+
+    animation: intro-2-appear 100ms forwards;
+    animation-delay: 7s;
+}
+
+@keyframes intro-2-appear {
+    to {
+        visibility: visible;
+	}
+}
+
+.qintro__cta {
+    opacity: 0;
+    animation: appear 100ms forwards;
+    animation-delay: 9s;
 }
