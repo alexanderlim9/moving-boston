@@ -2,7 +2,7 @@
     position:fixed;
     z-index: 1;
     animation: disappear 0s forwards;
-    animation-delay: 7s;
+    animation-delay: 5s;
 }
 
 @keyframes disappear {
@@ -18,8 +18,8 @@
     overflow: hidden;
     display: inline-block;
     vertical-align: bottom;
-    -webkit-animation: ellipsis steps(4,end) 4s forwards;     
-    animation: ellipsis steps(4,end) 4s forwards;
+    -webkit-animation: ellipsis steps(4,end) 2s forwards;     
+    animation: ellipsis steps(4,end) 2s forwards;
     animation-iteration-count: 1;
     content: "\2026"; /* ascii code for the ellipsis character */
   }
@@ -41,7 +41,7 @@
 .sequential-child:nth-child(2) {
     opacity: 0;
     animation: appear 100ms forwards;
-    animation-delay: 4s;
+    animation-delay: 2s;
 }
 
 @keyframes appear {
@@ -57,7 +57,7 @@
     visibility: hidden;
 
     animation: intro-2-appear 100ms forwards;
-    animation-delay: 7s;
+    animation-delay: 5s;
 }
 
 @keyframes intro-2-appear {
@@ -69,5 +69,5 @@
 .qintro__cta {
     opacity: 0;
     animation: appear 100ms forwards;
-    animation-delay: 9s;
+    animation-delay: 7s;
 }
