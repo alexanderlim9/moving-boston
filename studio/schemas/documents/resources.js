@@ -14,25 +14,28 @@ export default {
       title: 'Slug'
     },
     {
-      name: 'introDescription',
-      description: 'this goes in the intro slide before the resources page',
-      type: 'text',
-      title: 'Description'
-    },
-    /* {
-      title: 'Names',
-      name: 'names',
+      name: 'links',
       type: 'array',
+      title: 'Links',
       of: [
         {
           type: 'object',
+          title: 'Link',
+          name: 'link',
           fields: [
-            { name: 'street', type: 'string', title: 'Street name' },
-            { name: 'streetNo', type: 'string', title: 'Street number' },
-            { name: 'city', type: 'string', title: 'City' }
+            {
+              title: 'Link Title',
+              name: 'linktitle',
+              type: 'string'
+            },
+            {
+              title: 'Link URL',
+              name: 'linkurl',
+              type: 'string'
+            }
           ]
         }
       ]
-    } */
+    }
   ]
 }
