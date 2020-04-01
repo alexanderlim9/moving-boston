@@ -14,22 +14,35 @@ export default {
         title: 'Slug'
       },
       {
-        name: 'introNextDescription',
-        description: 'this goes in the intro slide before the question',
+        name: 'introText1',
+        description: 'First sentence of the intro.',
         type: 'text',
-        title: 'Description'
+        title: 'Intro Text 1'
       },
       {
-        name: 'introNextTitle',
+        name: 'introText2',
+        description: 'Second sentence of the intro.',
+        type: 'text',
+        title: 'Intro Text 2'
+      },
+      {
+        name: 'introText3',
+        description: 'Third sentence of the intro.',
+        type: 'text',
+        title: 'Intro Text 3'
+      },
+      {
+        name: 'segueToQuestion',
+        description: 'Transition to the main question.',
+        type: 'text',
+        title: 'Segue to Question'
+      },
+      {
+        name: 'question1',
         description: 'e.g., How will they get around?',
         type: 'string',
-        title: 'CTA title'
-      },
-      {
-        name: 'description',
-        type: 'text',
-        title: 'Description'
-      },
+        title: 'Question'
+      }
     ]
   }
   
