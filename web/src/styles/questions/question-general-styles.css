@@ -1,13 +1,9 @@
 body {
-  /* position: relative; */
   background-color: #3A71FF;
 }
 
-body::before {
-  content: "";
-  width: 100%;
+.tl-edges, .tl-wrapper {
   height: 100%;
-  background: url(../../assets/grid-background.svg) 0 0 repeat;
 }
 
 .qcontainer {
@@ -15,7 +11,7 @@ body::before {
   flex-direction: column;
   align-items: flex-start;
   padding: 60px 80px;
-  /* background-color: #3A71FF; */
+  background-color: #3A71FF;
   color: white;
   position: relative;
   overflow: hidden;

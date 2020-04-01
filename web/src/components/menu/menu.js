@@ -4,9 +4,12 @@ import MenuBackground from "./menu-background.svg";
 
 import "../../styles/menu/menu-styles.css";
 import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export const Menu = props => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const linkTransitionDuration = 0.5;
 
   return (
     <div className="menu">
@@ -24,23 +27,23 @@ export const Menu = props => {
           Moving Boston 2030
           <ol>
             <li>
-              <Link to="/">Home</Link>
+              <AniLink fade duration={linkTransitionDuration} to="/">Home</AniLink>
             </li>
 
             <li>
-              <Link to="/questions/questionone">Survey</Link>
+              <AniLink fade duration={linkTransitionDuration} to="/questions/questionone">Survey</AniLink>
             </li>
 
             <li>
-              <Link to='/today/'>Facts</Link>
+              <AniLink fade duration={linkTransitionDuration} to='/today/'>Facts</AniLink>
             </li>
 
             <li>
-              <Link to="/">Resources</Link>
+              <AniLink fade duration={linkTransitionDuration} to="/">Resources</AniLink>
             </li>
 
             <li>
-              <Link to="/">About</Link>
+              <AniLink fade duration={linkTransitionDuration} to="/">About</AniLink>
             </li>
           </ol>
         </div>

@@ -7,6 +7,7 @@ import { Link } from "@reach/router";
 import "../../styles/questions/question-general-styles.css";
 import "../../styles/questions/question-one-styles.css";
 import Frequency from "../../components/questioncomponents/frequency/frequency";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export const query = graphql`
   query QuestionOneQuery {
@@ -69,6 +70,7 @@ const QuestionOne = props => {
     Rideshare: { image: require('../../assets/transporationmodes/rideshare.png'), selectedValue: null },
     Scooter: { image: require('../../assets/transporationmodes/scooter.png'), selectedValue: null }
   });
+  const [isOnIntro, setIsOnIntro] = useState(true);
 
   const setSpecificOption = (opt, value) => {
     console.log("opt", opt.image);
@@ -106,9 +108,9 @@ const QuestionOne = props => {
             answerOptions={answerOptions}
           />
           <div className="qnextprev">
-            <Link to={"questions/questiontwo/"} onClick={() => setDisplayQuestion1(false)}className="qbutton qnextquestion">
+            <AniLink paintDrip hex="#3A71FF" duration={.5} to={"questions/questiontwo/"} onClick={() => setIsOnIntro(false)}className="qbutton qnextquestion">
               Next Question
-            </Link>
+            </AniLink>
           </div>
         </div>
       </div>

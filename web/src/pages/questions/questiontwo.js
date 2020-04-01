@@ -7,6 +7,7 @@ import Layout from "../../containers/layout";
 import "../../styles/questions/question-two-styles.css";
 import "../../styles/questions/question-general-styles.css";
 import { Link } from "@reach/router";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export const query = graphql`
   query QuestionTwoQuery {
@@ -54,12 +55,12 @@ const QuestionTwo = props => {
           placeholder={"What are some of your biggest frustrations?"}
         />
         <div className="qnextprev">
-          <Link to={"questions/questionone/"} className="qprevquestion">
+          <AniLink fade duration={.5} to={"questions/questionone/"} className="qprevquestion">
             Previous Question
-          </Link>
-          <Link to={"questions/questionthree/"} className="qnextquestion">
+          </AniLink>
+          <AniLink paintDrip hex="#3A71FF" duration={.5} to={"questions/questionthree/"} className="qnextquestion">
             Next Question
-          </Link>
+          </AniLink>
         </div>
         {/* <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`}>
           <div className="qintro__description">{qoneData.introNextDescription}</div>
