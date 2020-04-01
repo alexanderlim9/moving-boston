@@ -55,7 +55,7 @@ const QuestionTwo = props => {
           placeholder={"What are some of your biggest frustrations?"}
         />
         <div className="qnextprev">
-          <AniLink paintDrip hex="#3A71FF" duration={.5} to={"questions/questionone/"} className="qprevquestion">
+          <AniLink fade duration={.5} to={"questions/questionone/"} className="qprevquestion">
             Previous Question
           </AniLink>
           <AniLink paintDrip hex="#3A71FF" duration={.5} to={"questions/questionthree/"} className="qnextquestion">

@@ -68,11 +68,11 @@ const QuestionThree = props => {
           <Slider sliderTitle="Cable Cars" />
           <Slider sliderTitle="Trackless Trains" />
           <div className="qnextprev">
-            <AniLink paintDrip hex="#3A71FF" duration={.5}  to={"questions/questiontwo/"} className="qprevquestion">
+            <AniLink fade duration={.5}  to={"questions/questiontwo/"} className="qprevquestion">
               Previous Question
             </AniLink>
             <AniLink paintDrip hex="#3A71FF" duration={.5} to={"today/"} className="qnextquestion">
-              Next
+              Next Question
             </AniLink>
           </div>
         </div>

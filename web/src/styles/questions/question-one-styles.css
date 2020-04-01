@@ -38,6 +38,10 @@
 
 /*------------------------*/
 
+.sequential-child {
+    transiiton: opacity 200ms;
+}
+
 .sequential-child:nth-child(2) {
     opacity: 0;
     animation: appear 100ms forwards;
@@ -53,8 +57,12 @@
 /*------------------------*/
 
 .sequential-intro-2 {
+    transiiton: opacity 200ms;
+}
+
+.sequential-intro-2 {
     position:fixed;
-    visibility: hidden;
+    opacity: 0;
 
     animation: intro-2-appear 100ms forwards;
     animation-delay: 5s;
@@ -62,11 +70,11 @@
 
 @keyframes intro-2-appear {
     to {
-        visibility: visible;
+        opacity: 1;
 	}
 }
 
-.qintro__cta {
+.sequential-intro-2 .qintro__cta {
     opacity: 0;
     animation: appear 100ms forwards;
     animation-delay: 7s;

@@ -70,6 +70,7 @@ const QuestionOne = props => {
     Rideshare: { image: require('../../assets/transporationmodes/rideshare.png'), selectedValue: null },
     Scooter: { image: require('../../assets/transporationmodes/scooter.png'), selectedValue: null }
   });
+  const [isOnIntro, setIsOnIntro] = useState(true);
 
   const setSpecificOption = (opt, value) => {
     console.log("opt", opt.image);
