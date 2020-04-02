@@ -1,41 +1,32 @@
 export default {
   name: 'resources',
-  type: 'resources',
+  type: 'document',
   title: 'Resources',
-  fields: [
-    {
-      name: 'title',
-      type: 'string',
-      title: 'Title'
-    },
-    {
-      name: 'slug',
-      type: 'slug',
-      title: 'Slug'
-    },
-    {
-      name: 'links',
-      type: 'array',
-      title: 'Links',
-      of: [
-        {
-          type: 'object',
-          title: 'Link',
-          name: 'link',
-          fields: [
-            {
-              title: 'Link Title',
-              name: 'linktitle',
-              type: 'string'
-            },
-            {
-              title: 'Link URL',
-              name: 'linkurl',
-              type: 'string'
-            }
-          ]
-        }
-      ]
-    }
+  fields: [{
+    name: 'title',
+    type: 'string',
+    title: 'Title'
+  },
+  {
+    name: 'sectionDescription',
+    type: 'string',
+    title: 'Section Description',
+    description: 'A briefing on what this section will be for'
+  },
+  {
+    name: 'slug',
+    type: 'slug',
+    title: 'Slug'
+  },
+  {
+    name: 'linkblock',
+    type: 'array',
+    title: 'Link Block',
+    of: [{
+      type: 'resource',
+      title: 'Resource',
+      name: 'resource',
+    }]
+  }
   ]
 }
