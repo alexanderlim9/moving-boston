@@ -17,13 +17,13 @@ export const query = graphql`
     sanityResources {
       title
       sectionDescription
-        linkblock {
-          linkurl
-          linktitle
-          context
-          contexttitle
-        }
+      linkblock {
+        linkurl
+        linktitle
+        context
+        contexttitle
       }
+    }
   }
 `;
 
@@ -61,11 +61,12 @@ const ResourcesPage = props => {
                 contexttitle={link.contexttitle}
                 context={link.context}
                 linkurl={link.linkurl}
-                linktitle={link.linktitle} />
+                linktitle={link.linktitle}
+              />
             );
           })}
         </div>
-        <AniLink
+        {/* <AniLink
           paintDrip
           hex="#3A71FF"
           duration={0.5}
@@ -73,7 +74,7 @@ const ResourcesPage = props => {
           className="qbutton qnextquestion"
         >
           Let's do the work
-        </AniLink>
+        </AniLink> */}
       </div>
     </Layout>
   );
@@ -84,9 +85,11 @@ export default ResourcesPage;
 const Resource = props => {
   return (
     <div className="resource">
-      <div>{props.contexttitle}</div>
-      <div>{props.context}</div>
-      <a href={props.linkurl}>{props.linktitle}</a>
+      <div className="resource__context-title">{props.contexttitle}</div>
+      <div className="resource__context">{props.context}</div>
+      <a className="resource__link" href={props.linkurl}>
+        {props.linktitle}
+      </a>
     </div>
-  )
-}
+  );
+};
