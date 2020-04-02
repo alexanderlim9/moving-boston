@@ -1,17 +1,26 @@
 .today {
-  padding: 30px 80px;
+  padding: 60px 80px 10vh;
 }
 
 .today__description {
   font-family: 'UniversLTStd', sans-serif;
-  font-weight: 500;
+  font-weight: 900;
   font-size: 2em;
   color: white;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 900px) {
+  .today__description {
+    width: 66%;
+  }
 }
 
 .today__images-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .today__image {
