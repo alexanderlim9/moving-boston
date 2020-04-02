@@ -18,19 +18,23 @@
 }
 
 .resources__resource-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 30px;
+}
+
+@media (min-width: 900px) {
+  .resources__resource-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .resource {
-  margin-bottom: 60px;
-  width: 100%;
-}
-
-@media (min-width: 800px) {
-  .resource {
-    width: 65%;
-  }
+  margin-bottom: 30px;
+  width: 85%;
+  padding: 2em;
+  border: solid 2px white;
+  border-radius: 10px;
 }
 
 .resource__context-title {
