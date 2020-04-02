@@ -4,34 +4,30 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
 
-import "../styles/today/today-styles.css";
+import "../styles/resources/resources-styles.css";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export const query = graphql`
-  query TodayPageQuery {
+  query ResourcesPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
       keywords
     }
-    sanityToday {
+    sanityResources {
       title
       sectionDescription
-      images {
-        id
-        image {
-          alt
-          caption
-          asset {
-            url
-          }
-        }
+      linkblock {
+        linkurl
+        linktitle
+        context
+        contexttitle
       }
     }
   }
 `;
 
-const TodayPage = props => {
+const ResourcesPage = props => {
   const { data, errors } = props;
 
   if (errors) {
@@ -44,8 +40,8 @@ const TodayPage = props => {
 
   const site = (data || {}).site;
   //   const { title, _rawBody, subtitle } = (data || {}).sanityHomePage;
-  const todayData = (data || {}).sanityToday;
-  console.log(todayData);
+  const resourcesData = (data || {}).sanityResources;
+  console.log(resourcesData);
   // console.log(imageUrlFor(buildImageObj(hpdata._rawHeroImage)))
 
   if (!site) {
@@ -54,44 +50,46 @@ const TodayPage = props => {
     );
   }
 
-  /* <div
-  style={{ backgroundImage: `url(${hpdata.heroImage.asset.url})` }}
-  alt={hpdata.heroImage.alt}
-  className="hphero"> */
-
   return (
     <Layout>
-      <div className="today">
-        <div className="today__description">{todayData.sectionDescription}</div>
-        <div className="today__images-container">
-          {todayData.images.map((image, index) => {
+      <div className="resources">
+        <div className="resources__description">{resourcesData.sectionDescription}</div>
+        <div className="resources__resource-list">
+          {resourcesData.linkblock.map((link, index) => {
             return (
-              <img
-                key={index}
-                className={"today__image"}
-                src={image.image.asset.url}
-                alt={image.image.alt}
+              <Resource
+                contexttitle={link.contexttitle}
+                context={link.context}
+                linkurl={link.linkurl}
+                linktitle={link.linktitle}
               />
             );
           })}
         </div>
-
-        <div className="today__description">
-          If we want to see bigger changes to the system, it’s up to us.
-        </div>
-
-        <AniLink
+        {/* <AniLink
           paintDrip
           hex="#3A71FF"
           duration={0.5}
-          to={"resources"}
+          to={"questions/questiontwo/"}
           className="qbutton qnextquestion"
         >
           Let's do the work
-        </AniLink>
+        </AniLink> */}
       </div>
     </Layout>
   );
 };
 
-export default TodayPage;
+export default ResourcesPage;
+
+const Resource = props => {
+  return (
+    <div className="resource">
+      <div className="resource__context-title">{props.contexttitle}</div>
+      <div className="resource__context">{props.context}</div>
+      <a className="resource__link" href={props.linkurl}>
+        {props.linktitle}
+      </a>
+    </div>
+  );
+};

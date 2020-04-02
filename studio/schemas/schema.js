@@ -17,6 +17,7 @@ import homePage from './documents/home-page'
 import siteSettings from './documents/siteSettings'
 import today from './documents/today'
 import todayImage from './documents/todayImage'
+import resources from './documents/resources'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -27,6 +28,7 @@ import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 import contextSlide from './objects/contextSlide'
 import authorReference from './objects/authorReference'
+import resource from './objects/resource'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -39,6 +41,7 @@ export default createSchema({
     // in the studio.
     siteSettings,
     homePage,
+    resources,
     post,
     section,
     today,
@@ -56,7 +59,8 @@ export default createSchema({
     slidePortableText,
     questionObj,
     bioPortableText,
-    excerptPortableText
+    excerptPortableText,
+    resource
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

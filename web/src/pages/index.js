@@ -132,7 +132,7 @@ const IndexPage = props => {
               <Link to={"/today/"} className={"hp__lower-container__cta"}>
                 {hpdata.secThreeCTA}
               </Link>
-              <Link to={"/today/"} className={"hp__lower-container__cta"}>
+              <Link to={"/resources/"} className={"hp__lower-container__cta"}>
                 {hpdata.secThreeSecondaryCTA}
               </Link>
             </div>

@@ -39,7 +39,7 @@ export const Menu = props => {
             </li>
 
             <li>
-              <AniLink fade duration={linkTransitionDuration} to="/">Resources</AniLink>
+              <AniLink fade duration={linkTransitionDuration} to="/resources">Resources</AniLink>
             </li>
 
             <li>

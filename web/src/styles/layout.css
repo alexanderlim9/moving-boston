@@ -18,6 +18,12 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: 'UniversLTStd';
+  src: url(../fonts/UniversLTStd-Ex.otf) format('opentype');
+  font-weight: normal
+}
+
 html {
   font-family: var(--font-family-sans);
   font-size: var(--font-base-size);
