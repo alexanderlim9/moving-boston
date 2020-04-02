@@ -21,24 +21,38 @@
 
 .hphero__title {
   font-weight: 600;
-  line-height: 1.1em;
+  line-height: 11vw;
   text-align: center;
   width: calc(100% - 40px);
   margin: 0;
   color: white;
-  font-size: 5.5em;
+  font-size: 9vw;
   letter-spacing: 0.375em;
   text-transform: uppercase;
   display: inline-block;
+}
+
+@media (min-width: 960px) {
+  .hphero__title {
+    line-height: 1.1em;
+    font-size: 5.5em;
+  }
 }
 
 .hphero__year {
   font-weight: 500;
   margin: 10px;
   color: white;
-  font-size: 40px;
+  font-size: 6vw;
   letter-spacing: 0.5em;
   display: inline-block;
+}
+
+
+@media (min-width: 760px) {
+  .hphero__year {
+    font-size: 40px;
+  }
 }
 
 .hphero__cta {
