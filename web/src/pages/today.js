@@ -84,7 +84,7 @@ const TodayPage = props => {
           paintDrip
           hex="#3A71FF"
           duration={0.5}
-          to={"questions/questiontwo/"}
+          to={"resources"}
           className="qbutton qnextquestion"
         >
           Let's do the work
