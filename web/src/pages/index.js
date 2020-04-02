@@ -125,6 +125,9 @@ const IndexPage = props => {
         <div className={"hp__block  hp__facts"}>
           <div className={"hp__block__title"}>{hpdata.secThreeTitle}</div>
           <div className={"hp__block__lower-container"}>
+            <div className={"hp__block__text hp__facts__text"}>
+              {hpdata._rawSecTwoBody && <PortableText blocks={hpdata._rawSecThreeBody} />}
+            </div>
             <div className={"hp__facts__cta-container"}>
               <Link to={"/today/"} className={"hp__lower-container__cta"}>
                 {hpdata.secThreeCTA}
@@ -132,9 +135,6 @@ const IndexPage = props => {
               <Link to={"/today/"} className={"hp__lower-container__cta"}>
                 {hpdata.secThreeSecondaryCTA}
               </Link>
-            </div>
-            <div className={"hp__block__text hp__facts__text"}>
-              {hpdata._rawSecTwoBody && <PortableText blocks={hpdata._rawSecThreeBody} />}
             </div>
           </div>
         </div>
