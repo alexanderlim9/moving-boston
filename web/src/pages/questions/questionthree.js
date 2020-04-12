@@ -71,8 +71,15 @@ const QuestionThree = props => {
             <AniLink fade duration={.5}  to={"questions/questiontwo/"} className="qprevquestion">
               Previous Question
             </AniLink>
-            <AniLink paintDrip hex="#3A71FF" duration={.5} to={"today/"} className="qnextquestion">
-              Next Question
+            <AniLink 
+            paintDrip
+            hex="#3A71FF"
+            duration={.5}
+            to={"today/"}
+            shouldUpdateScroll={false}
+            className="qnextquestion"
+            >
+              Next
             </AniLink>
           </div>
         </div>

@@ -41,6 +41,8 @@ const FrequencyItem = props => {
       className={`frequency-item ${
         isOpen ? "frequency-item--is-open" : "frequency-item--is-closed"
       }`}
+      onMouseOver={() => setIsOpen(true)}
+      onMouseOut={() => setIsOpen(false)}
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="frequency-item__label-container">
