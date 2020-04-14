@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import PortableText from "../components/portableText";
 import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
@@ -16,17 +17,15 @@ export const query = graphql`
     }
     sanityToday {
       title
-      sectionDescription
-      images {
-        id
-        image {
-          alt
-          caption
-          asset {
-            url
-          }
-        }
+      intro
+      slug {
+        current
       }
+      sectionOneTitle
+      sectionTwoTitle
+      _rawSectionTwoContent
+      linkToInfo
+      outro
     }
   }
 `;
@@ -62,8 +61,14 @@ const TodayPage = props => {
   return (
     <Layout>
       <div className="today">
-        <div className="today__description">{todayData.sectionDescription}</div>
-        <div className="today__images-container">
+        <div className="today__description">{todayData.intro}</div>
+        <div className="today__description">{todayData.sectionOneTitle}</div>
+        <div className="today__description">{todayData.sectionTwoTitle}</div>
+        <div className="today__description today__sectionTwoContent">
+          {todayData._rawSectionTwoContent && <PortableText blocks={todayData._rawSectionTwoContent}/>}
+        </div>
+
+        {/* <div className="today__images-container">
           {todayData.images.map((image, index) => {
             return (
               <img
@@ -74,7 +79,7 @@ const TodayPage = props => {
               />
             );
           })}
-        </div>
+        </div> */}
 
         <div className="today__description">
           If we want to see bigger changes to the system, it’s up to us.

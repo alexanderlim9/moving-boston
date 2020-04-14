@@ -30,3 +30,18 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
+
+.today__sectionTwoContent ul {
+  padding: 0em;
+}
+
+.today__sectionTwoContent li {
+  list-style-type: none;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 1em;
+  margin-bottom: 1em;
+  color: black;
+  background-color: white;
+  font-size: .5em;
+}
