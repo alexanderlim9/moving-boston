@@ -62,15 +62,19 @@ const TodayPage = props => {
     <Layout>
       <div className="today">
         <div className="today__text">{todayData.intro}</div>
-        <div className="today__text">{todayData.sectionOneTitle}</div>
-        <div className="today__text">{todayData.sectionTwoTitle}</div>
-        <div className="today__text today__sectionTwoContent">
+        <div className="today__sectionOne">
+          <h1>{todayData.sectionOneTitle}</h1>
+        </div>
+        <div className="today__sectionTwo">
+          <h1>{todayData.sectionTwoTitle}</h1>
+        </div>
+        <div className="today__sectionTwoContent">
           {todayData._rawSectionTwoContent && <PortableText blocks={todayData._rawSectionTwoContent}/>}
         </div>
-        <div className="today__text">For more information, visit
-          <a className="today__text" href={todayData.linkToInfo} target="_blank">goboston2030.org</a>
+        <div>For more information, visit&nbsp;
+          <a href={todayData.linkToInfo} target="_blank">goboston2030.org</a>
         </div>
-        <div className="today__text">{todayData.outro}</div>
+        <div>{todayData.outro}</div>
 
         <AniLink
           paintDrip
