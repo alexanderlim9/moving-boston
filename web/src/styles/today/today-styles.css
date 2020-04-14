@@ -2,7 +2,7 @@
   padding: 60px 80px 10vh;
 }
 
-.today__description {
+.today__text {
   font-family: 'UniversLTStd', sans-serif;
   font-weight: 900;
   font-size: 2em;
@@ -12,7 +12,7 @@
 }
 
 @media (min-width: 900px) {
-  .today__description {
+  .today__text {
     width: 66%;
   }
 }

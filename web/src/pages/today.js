@@ -61,29 +61,16 @@ const TodayPage = props => {
   return (
     <Layout>
       <div className="today">
-        <div className="today__description">{todayData.intro}</div>
-        <div className="today__description">{todayData.sectionOneTitle}</div>
-        <div className="today__description">{todayData.sectionTwoTitle}</div>
-        <div className="today__description today__sectionTwoContent">
+        <div className="today__text">{todayData.intro}</div>
+        <div className="today__text">{todayData.sectionOneTitle}</div>
+        <div className="today__text">{todayData.sectionTwoTitle}</div>
+        <div className="today__text today__sectionTwoContent">
           {todayData._rawSectionTwoContent && <PortableText blocks={todayData._rawSectionTwoContent}/>}
         </div>
-
-        {/* <div className="today__images-container">
-          {todayData.images.map((image, index) => {
-            return (
-              <img
-                key={index}
-                className={"today__image"}
-                src={image.image.asset.url}
-                alt={image.image.alt}
-              />
-            );
-          })}
-        </div> */}
-
-        <div className="today__description">
-          If we want to see bigger changes to the system, it’s up to us.
+        <div className="today__text">For more information, visit
+          <a className="today__text" href={todayData.linkToInfo} target="_blank">goboston2030.org</a>
         </div>
+        <div className="today__text">{todayData.outro}</div>
 
         <AniLink
           paintDrip
