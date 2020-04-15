@@ -6,6 +6,16 @@ import Layout from "../containers/layout";
 
 import "../styles/resources/resources-styles.css";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  LinkedinShareButton,
+  EmailIcon,
+  EmailShareButton
+} from "react-share";
 
 export const query = graphql`
   query ResourcesPageQuery {
@@ -65,6 +75,7 @@ const ResourcesPage = props => {
               />
             );
           })}
+          <ShareResource />
         </div>
         {/* <AniLink
           paintDrip
@@ -90,6 +101,58 @@ const Resource = props => {
       <a className="resource__link" href={props.linkurl}>
         {props.linktitle}
       </a>
+    </div>
+  );
+};
+
+const ShareResource = props => {
+  const shareUrl = "https://moving-boston-web.netlify.com/";
+  const iconSize = 28;
+
+  return (
+    <div className="resource">
+      <div className="resource__context-title">
+        Start the conversation, share this survey on social media
+      </div>
+      <div className="resource__context">test context</div>
+
+      <div className="resource__social-links">
+        <EmailShareButton url={shareUrl}>
+          <EmailIcon
+            size={iconSize}
+            borderRadius={5}
+            iconFillColor={"#3A71FF"}
+            bgStyle={{ fill: "white" }}
+          />
+        </EmailShareButton>
+
+        <FacebookShareButton url={shareUrl}>
+          <FacebookIcon
+            size={iconSize}
+            borderRadius={5}
+            iconFillColor={"#3A71FF"}
+            bgStyle={{ fill: "white" }}
+          />
+        </FacebookShareButton>
+
+        <TwitterShareButton url={shareUrl}>
+          <TwitterIcon
+            size={iconSize}
+            borderRadius={5}
+            iconFillColor={"#3A71FF"}
+            bgStyle={{ fill: "white" }}
+          />
+        </TwitterShareButton>
+
+        <LinkedinShareButton url={shareUrl}>
+          <LinkedinIcon
+            size={iconSize}
+            borderRadius={5}
+            iconFillColor={"#3A71FF"}
+            bgStyle={{ fill: "white" }}
+          />
+        </LinkedinShareButton>
+      </div>
     </div>
   );
 };

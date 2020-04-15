@@ -69,3 +69,9 @@
 .resource__link:hover::after {
   margin-left: 20px;
 }
+
+.resource__social-links {
+  display: flex;
+  width: 35%;
+ justify-content: space-between; 
+}
