@@ -8,6 +8,7 @@ import "../../styles/questions/question-two-styles.css";
 import "../../styles/questions/question-general-styles.css";
 import { Link } from "@reach/router";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import ProgressBar from "../../components/progressbar/progressbar";
 
 export const query = graphql`
   query QuestionTwoQuery {
@@ -45,10 +46,17 @@ const QuestionTwo = props => {
   }
 
   const [isOnIntro, setIsOnIntro] = useState(true);
+  const [progressAmount, setProgressAmount] = useState("50%");
 
   return (
     <Layout>
       <div className="qcontainer">
+        <ProgressBar
+          progressAmount={progressAmount}
+          oneColor={"#2E2E2E"}
+          twoColor={"#EBFF00"}
+          threeColor={"#3A71FF"}
+        />
         <div className="qintro__description">{qtwoData.question}</div>
         <textarea
           className="qtwo__frq"

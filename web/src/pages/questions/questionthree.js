@@ -9,6 +9,7 @@ import "../../styles/questions/question-general-styles.css";
 import Slider from "../../components/questioncomponents/slider/slider";
 import { Link } from "@reach/router";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import ProgressBar from "../../components/progressbar/progressbar";
 
 export const query = graphql`
   query QuestionThreeQuery {
@@ -51,14 +52,21 @@ const QuestionThree = props => {
   }
 
   const [isOnIntro, setIsOnIntro] = useState(true);
+  const [progressAmount, setProgressAmount] = useState("75%");
 
   return (
     <Layout>
       <div className="qcontainer">
+        <ProgressBar
+          progressAmount={progressAmount}
+          oneColor={"#2E2E2E"}
+          twoColor={"#2E2E2E"}
+          threeColor={"#EBFF00"}
+        />
         <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`}>
           <div className="qintro__description">{qthreeData.introNextDescription}</div>
           <div className="qintro__cta" onClick={() => setIsOnIntro(false)}>
-          <div className="qnextlink">{qthreeData.introNextTitle}</div>
+            <div className="qnextlink">{qthreeData.introNextTitle}</div>
           </div>
         </div>
 
@@ -68,16 +76,16 @@ const QuestionThree = props => {
           <Slider sliderTitle="Cable Cars" />
           <Slider sliderTitle="Trackless Trains" />
           <div className="qnextprev">
-            <AniLink fade duration={.5}  to={"questions/questiontwo/"} className="qprevquestion">
+            <AniLink fade duration={0.5} to={"questions/questiontwo/"} className="qprevquestion">
               Previous Question
             </AniLink>
-            <AniLink 
-            paintDrip
-            hex="#3A71FF"
-            duration={.5}
-            to={"today/"}
-            shouldUpdateScroll={false}
-            className="qnextquestion"
+            <AniLink
+              paintDrip
+              hex="#3A71FF"
+              duration={0.5}
+              to={"today/"}
+              shouldUpdateScroll={false}
+              className="qnextquestion"
             >
               Next
             </AniLink>

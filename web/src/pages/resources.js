@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { graphql } from "gatsby";
 import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
@@ -16,6 +16,7 @@ import {
   EmailIcon,
   EmailShareButton
 } from "react-share";
+import ProgressBar from "../components/progressbar/progressbar";
 
 export const query = graphql`
   query ResourcesPageQuery {
@@ -60,9 +61,17 @@ const ResourcesPage = props => {
     );
   }
 
+  const [progressAmount, setProgressAmount] = useState("100%");
+
   return (
     <Layout>
       <div className="resources">
+        <ProgressBar
+          progressAmount={progressAmount}
+          oneColor={"#2E2E2E"}
+          twoColor={"#2E2E2E"}
+          threeColor={"#2E2E2E"}
+        />
         <div className="resources__description">{resourcesData.sectionDescription}</div>
         <div className="resources__resource-list">
           {resourcesData.linkblock.map((link, index) => {
