@@ -53,7 +53,7 @@ const QuestionOne = props => {
     );
   }
 
-  const [displayQuestion1, setDisplayQuestion1] = useState(false);
+  const [displayStep, setDisplayStep] = useState(0);
   const [answerOptions, setAnswerOptions] = useState([
     "Never",
     "Sometimes",
@@ -91,9 +91,15 @@ const QuestionOne = props => {
   };
 
   const setStepTwo = () => {
-    setDisplayQuestion1(true);
+    setDisplayStep(1);
     setProgressAmount("25%");
     setOneColor("#EBFF00");
+  };
+
+  const setStepThree = () => {
+    setDisplayStep(2);
+    setProgressAmount("37.5%");
+    setOneColor("#2E2E2E");
   };
 
   return (
@@ -112,7 +118,7 @@ const QuestionOne = props => {
         </div>
         <div
           className={`sequential-intro-2 ${
-            !displayQuestion1 ? "qcontent--shown" : "qcontent--hidden"
+            displayStep === 0 ? "qcontent--shown" : "qcontent--hidden"
           }`}
         >
           <div className="qintro__description">{qoneData.introText3}</div>
@@ -122,13 +128,68 @@ const QuestionOne = props => {
         </div>
 
         {/* Question */}
-        <div className={`qcontent ${displayQuestion1 ? "qcontent--shown" : "qcontent--hidden"}`}>
+        <div className={`qcontent ${displayStep === 1 ? "qcontent--shown" : "qcontent--hidden"}`}>
           <div className="qintro__description">{qoneData.question1}</div>
           <Frequency
             setSpecificCallback={(opt, value) => setSpecificOption(opt, value)}
             options={options}
             answerOptions={answerOptions}
           />
+          <div className="qintro__cta" onClick={() => setStepThree()}>
+            <div className="qbutton qnextquestion" style={{display: "inline-block"}}>Next</div>
+          </div>
+        </div>
+
+        {/* Payoff */}
+        <div className={`qcontent ${displayStep === 2 ? "qcontent--shown" : "qcontent--hidden"} qpayoff`}>
+          <div className="qintro__description">Let's see how you compare</div>
+          <div className="payoff__text">
+            Bostonians get around in a lot of different ways. On an average commute
+          </div>
+
+          <div className="payoff__percent-block">
+            <div className="payoff__percent">39%</div>
+            <div className="payoff__text">
+              of Bostonians <em>drive alone</em>
+            </div>
+          </div>
+
+          <div className="payoff__percent-block">
+            <div className="payoff__percent">34%</div>
+            <div className="payoff__text">
+              take <em>public transit</em>, including the T, bus, &amp; commuter rail
+            </div>
+          </div>
+
+          <div className="payoff__percent-block payoff__small-container">
+            <div className="payoff__percent-block--small">
+              <div className="payoff__percent">14%</div>
+              <div className="payoff__text">
+                <em>walk</em>
+              </div>
+            </div>
+
+            <div className="payoff__percent-block--small">
+              <div className="payoff__percent">6%</div>
+              <div className="payoff__text">
+                <em>carpool</em>
+              </div>
+            </div>
+
+            <div className="payoff__percent-block--small">
+              <div className="payoff__percent">2%</div>
+              <div className="payoff__text">
+                <em>bike</em>
+              </div>
+            </div>
+
+            
+          </div>
+          <div className="payoff__text payoff__text--bottom">and 5% use other forms of transportation.</div>
+            <div className="payoff__text payoff__text--bottom">
+              Data from 2014, compiled by <a href="http://goboston2030.org">GoBoston2030</a>
+            </div>
+
           <div className="qnextprev">
             <AniLink
               paintDrip

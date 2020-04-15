@@ -1,81 +1,126 @@
 .sequential-intro-1 {
-    position:fixed;
-    z-index: 1;
-    animation: disappear 0s forwards;
-    animation-delay: 5s;
+  position: fixed;
+  z-index: 1;
+  animation: disappear 0s forwards;
+  animation-delay: 5s;
 }
 
 @keyframes disappear {
-    to {
-        visibility: hidden;
-        z-index: -1;
-	}
+  to {
+    visibility: hidden;
+    z-index: -1;
+  }
 }
+
 /*------------------------*/
 
 .sequential-child:nth-child(1):after {
-    width: 0px;
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: bottom;
-    -webkit-animation: ellipsis steps(4,end) 2s forwards;     
-    animation: ellipsis steps(4,end) 2s forwards;
-    animation-iteration-count: 1;
-    content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 2s forwards;
+  animation: ellipsis steps(4, end) 2s forwards;
+  animation-iteration-count: 1;
+  content: "\2026";
+  /* ascii code for the ellipsis character */
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.8em;
   }
-  
-  @keyframes ellipsis {
-    to {
-      width: 1.8em;    
-    }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.8em;
   }
-  
-  @-webkit-keyframes ellipsis {
-    to {
-        width: 1.8em;    
-    }
-  }
+}
 
 /*------------------------*/
 
 .sequential-child {
-    transiiton: opacity 200ms;
+  transiiton: opacity 200ms;
 }
 
 .sequential-child:nth-child(2) {
-    opacity: 0;
-    animation: appear 100ms forwards;
-    animation-delay: 2s;
+  opacity: 0;
+  animation: appear 100ms forwards;
+  animation-delay: 2s;
 }
 
 @keyframes appear {
-    to {
-		opacity: 1;
-	}
+  to {
+    opacity: 1;
+  }
 }
 
 /*------------------------*/
 
 .sequential-intro-2 {
-    transiiton: opacity 200ms;
+  transiiton: opacity 200ms;
 }
 
 .sequential-intro-2 {
-    position:fixed;
-    opacity: 0;
+  position: fixed;
+  opacity: 0;
 
-    animation: intro-2-appear 100ms forwards;
-    animation-delay: 5s;
+  animation: intro-2-appear 100ms forwards;
+  animation-delay: 5s;
 }
 
 @keyframes intro-2-appear {
-    to {
-        opacity: 1;
-	}
+  to {
+    opacity: 1;
+  }
 }
 
 .sequential-intro-2 .qintro__cta {
-    opacity: 0;
-    animation: appear 100ms forwards;
-    animation-delay: 7s;
+  opacity: 0;
+  animation: appear 100ms forwards;
+  animation-delay: 7s;
+}
+
+.payoff__text {
+  font-family: 'UniversLTStdEx', sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  
+  width: 700px;
+}
+
+.qpayoff {
+  background-color: #3A71FF;
+}
+.payoff__text em {
+  font-style: normal;
+  background: linear-gradient(rgba(255, 255, 255, 0) 60%, rgba(255, 40, 0, .6) 40%)
+}
+
+.payoff__text--bottom {
+  font-size: 1.125em;
+}
+
+.payoff__percent {
+  font-family: 'UniversLTStdEx', sans-serif;
+  font-weight: 600;
+  font-size: 10em;
+  height: 1.25em;
+}
+
+.payoff__small-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.payoff__percent-block {
+  padding-bottom: 60px;
+}
+.payoff__percent-block--small {
+  width: 30%;
+}
+
+.payoff__percent-block--small .payoff__percent {
+  font-size: 5em;
 }

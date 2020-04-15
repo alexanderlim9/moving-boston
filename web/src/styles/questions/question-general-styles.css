@@ -93,6 +93,7 @@ body {
 .qnextquestion:hover {
   background-color: #3A71FF;
   color: white;
+  cursor: pointer;
 }
 
 .qprevquestion {
