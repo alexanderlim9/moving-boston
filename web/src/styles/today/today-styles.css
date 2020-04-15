@@ -2,8 +2,8 @@
   padding: 60px 80px 10vh;
 }
 
-.today > div {
-  font-family: 'UniversLTStd', sans-serif;
+.today > div:not(:first-child) {
+  font-family: 'UniversLTStdEx', sans-serif;
   font-weight: 900;
   font-size: 2em;
   color: white;
@@ -16,7 +16,7 @@ h1 {
 }
 
 @media (min-width: 900px) {
-  .today > div {
+  .today > div:not(:first-child) {
     width: 66%;
   }
 }

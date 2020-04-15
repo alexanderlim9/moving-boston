@@ -47,8 +47,9 @@
   font-family: 'UniversLTStd', sans-serif;
   font-size: 1em;
   color: white;
-  font-weight: normal;
+  font-weight: light;
   padding: 15px 0;
+  line-height: 1.25em;
 }
 
 .resource__link {
@@ -67,4 +68,10 @@
 
 .resource__link:hover::after {
   margin-left: 20px;
+}
+
+.resource__social-links {
+  display: flex;
+  width: 35%;
+ justify-content: space-between; 
 }

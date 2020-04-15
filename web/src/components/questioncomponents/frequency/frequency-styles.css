@@ -1,5 +1,5 @@
 .frequency {
-  font-family: 'UniversLTStd', sans-serif;
+  font-family: 'UniversLTStdEx', sans-serif;
   font-weight: 600;
 }
 
@@ -37,7 +37,7 @@
   height: 10px;
   margin-left: 5px;
   border-radius: 10px;
-  background-color: #e65538;
+  background-color: #EBFF00;
 }
 
 .frequency-item__label-container {
@@ -78,6 +78,11 @@
 .frequency-item__label-container__selected-option {
   padding: 5px 0;
   color: white;
+}
+
+.frequency-item__option:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .frequency-item__option--selected{

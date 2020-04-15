@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import PortableText from "../components/portableText";
 import GraphQLErrorList from "../components/graphql-error-list";
@@ -7,6 +7,7 @@ import Layout from "../containers/layout";
 
 import "../styles/today/today-styles.css";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import ProgressBar from "../components/progressbar/progressbar";
 
 export const query = graphql`
   query TodayPageQuery {
@@ -58,9 +59,16 @@ const TodayPage = props => {
   alt={hpdata.heroImage.alt}
   className="hphero"> */
 
+  const [progressAmount, setProgressAmount] = useState("85%")
   return (
     <Layout>
       <div className="today">
+        <ProgressBar
+          progressAmount={progressAmount}
+          oneColor={"#2E2E2E"}
+          twoColor={"#2E2E2E"}
+          threeColor={"#2E2E2E"}
+        />
         <div className="today__text">{todayData.intro}</div>
         <div className="today__sectionOne">
           <h1>{todayData.sectionOneTitle}</h1>
@@ -68,28 +76,28 @@ const TodayPage = props => {
             <div className="today__modes-item">
               <h2>Walking</h2>
               <div className="today__modes-stat">
-                <img src={require('../assets/fact-stats/50percent-up.png')}/>
+                <img src={require("../assets/fact-stats/50percent-up.png")} />
                 <span>up 50%</span>
               </div>
             </div>
             <div className="today__modes-item">
               <h2>Public Transit</h2>
               <div className="today__modes-stat">
-                <img src={require('../assets/fact-stats/33percent.png')}/>
+                <img src={require("../assets/fact-stats/33percent.png")} />
                 <span>up 33%</span>
               </div>
             </div>
             <div className="today__modes-item">
               <h2>Biking</h2>
               <div className="today__modes-stat">
-                <img id="biking-stat" src={require('../assets/fact-stats/4x.png')}/>
+                <img id="biking-stat" src={require("../assets/fact-stats/4x.png")} />
                 <span>more usage</span>
               </div>
             </div>
             <div className="today__modes-item">
               <h2>Driving Alone</h2>
               <div className="today__modes-stat">
-                <img src={require('../assets/fact-stats/50percent-down.png')}/>
+                <img src={require("../assets/fact-stats/50percent-down.png")} />
                 <span>down 50%</span>
               </div>
             </div>
@@ -97,10 +105,17 @@ const TodayPage = props => {
         </div>
         <div className="today__sectionTwo">
           <h1>{todayData.sectionTwoTitle}</h1>
-          {todayData._rawSectionTwoContent && <PortableText blocks={todayData._rawSectionTwoContent}/>}
+          {todayData._rawSectionTwoContent && (
+            <PortableText blocks={todayData._rawSectionTwoContent} />
+          )}
         </div>
         <div className="today__moreInfo">
-          <p>For more information, visit <a href={todayData.linkToInfo} target="_blank">goboston2030.org</a></p>
+          <p>
+            For more information, visit{" "}
+            <a href={todayData.linkToInfo} target="_blank">
+              goboston2030.org
+            </a>
+          </p>
         </div>
         <div>{todayData.outro}</div>
 
