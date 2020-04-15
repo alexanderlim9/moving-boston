@@ -13,7 +13,7 @@
 }
 
 .hp__block__text {
-  font-family: 'UniversLTStd', sans-serif;
+  font-family: 'UniversLTStdEx', sans-serif;
   font-weight: 500;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .hp__lower-container__cta {
-	font-family: 'UniversLTStd', sans-serif;
+	font-family: 'UniversLTStdEx', sans-serif;
 	width: 100%;
   border: 2px solid white;
   border-radius: 50px;

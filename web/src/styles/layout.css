@@ -13,15 +13,27 @@
 }
 
 @font-face {
-  font-family: 'UniversLTStd';
+  font-family: 'UniversLTStdEx';
   src: url(../fonts/UniversLTStd-BoldEx.otf) format('opentype');
   font-weight: bold;
 }
 
 @font-face {
-  font-family: 'UniversLTStd';
+  font-family: 'UniversLTStdEx';
   src: url(../fonts/UniversLTStd-Ex.otf) format('opentype');
   font-weight: normal
+}
+
+@font-face {
+  font-family: 'UniversLTStd';
+  src: url(../fonts/UniversLTStd.ttf) format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'UniversLTStd';
+  src: url(../fonts/UniversLTStd-Light.otf) format('opentype');
+  font-weight: light;
 }
 
 html {
