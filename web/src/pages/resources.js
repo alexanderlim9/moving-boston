@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
@@ -123,7 +123,10 @@ const ShareResource = props => {
       <div className="resource__context-title">
         Start the conversation, share this survey on social media
       </div>
-      <div className="resource__context">test context</div>
+      <div className="resource__context">
+        Share this survey on social media to get more people talking and reflecting on the
+        importance of public transit!{" "}
+      </div>
 
       <div className="resource__social-links">
         <EmailShareButton url={shareUrl}>
