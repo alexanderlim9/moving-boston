@@ -10,9 +10,9 @@ export default {
       description: 'Titles should be catchy, descriptive, and not too long'
     },
     {
-      name: 'sectionDescription',
+      name: 'intro',
       type: 'string',
-      title: 'Section Description',
+      title: 'Intro',
       description: 'A briefing on what this section will be for'
     },
     {
@@ -24,6 +24,31 @@ export default {
         source: 'name',
         maxLength: 96
       }
+    },
+    {
+      name: 'sectionOneTitle',
+      type: 'string',
+      title: 'Section 1 Title'
+    },
+    {
+      name: 'sectionTwoTitle',
+      type: 'string',
+      title: 'Section 2 Title'
+    },
+    {
+      name: 'sectionTwoContent',
+      type: 'array',
+      of: [{type: 'block'}]
+    },
+    {
+      name: 'linkToInfo',
+      title: 'Link to Additional Info',
+      type: 'url',
+    },
+    {
+      name: 'outro',
+      title: 'End of section content',
+      type: 'string'
     },
     {
       name: 'images',
@@ -39,11 +64,4 @@ export default {
       ]
     }
   ]
-  /* preview: {
-      select: {
-        title: 'name',
-        subtitle: 'slug.current',
-        media: 'image'
-      }
-    } */
 }
