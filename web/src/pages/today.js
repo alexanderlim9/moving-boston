@@ -82,7 +82,7 @@ const TodayPage = props => {
             <div className="today__modes-item">
               <h2>Biking</h2>
               <div className="today__modes-stat">
-                <img id="" src={require('../assets/fact-stats/4x.png')}/>
+                <img id="biking-stat" src={require('../assets/fact-stats/4x.png')}/>
                 <span>more usage</span>
               </div>
             </div>
