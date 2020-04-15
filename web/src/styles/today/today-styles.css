@@ -21,6 +21,44 @@ h1 {
   }
 }
 
+.today__modes-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: .25em .5em .5em;
+  margin-bottom: .5em;
+}
+
+@media (min-width: 700px) {
+  .today__modes-item {
+    display: flex;
+    flex-direction: row;
+    padding: .25em .5em;
+  }
+}
+
+.today__modes-item > h2 {
+  font-size: 1.25em;
+}
+
+.today__modes-stat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.today__modes-stat > img {
+  height: 50%;
+  padding-right: 10px
+}
+
+#biking-stat {
+  height: 40%;
+  padding-bottom: 15px;
+}
+
 .today__images-container {
   display: flex;
   justify-content: center;
@@ -35,11 +73,15 @@ h1 {
   background-size: 100% auto;
 }
 
-.today__sectionTwoContent ul {
+.today__sectionTwo > h1 {
+  margin-bottom: 1em;
+}
+
+.today__sectionTwo ul {
   padding: 0em;
 }
 
-.today__sectionTwoContent li {
+.today__sectionTwo li {
   list-style-type: none;
   border: solid 2px white;
   border-radius: 5px;
@@ -48,4 +90,12 @@ h1 {
   color: black;
   background-color: white;
   font-size: .5em;
+}
+
+.today__moreInfo > p{
+  font-size: .5em;
+}
+
+.today__moreInfo > p > a:visited {
+  color: white;
 }

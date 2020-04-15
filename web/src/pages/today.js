@@ -64,15 +64,43 @@ const TodayPage = props => {
         <div className="today__text">{todayData.intro}</div>
         <div className="today__sectionOne">
           <h1>{todayData.sectionOneTitle}</h1>
+          <div className="today__modes">
+            <div className="today__modes-item">
+              <h2>Walking</h2>
+              <div className="today__modes-stat">
+                <img src={require('../assets/fact-stats/50percent-up.png')}/>
+                <span>up 50%</span>
+              </div>
+            </div>
+            <div className="today__modes-item">
+              <h2>Public Transit</h2>
+              <div className="today__modes-stat">
+                <img src={require('../assets/fact-stats/33percent.png')}/>
+                <span>up 33%</span>
+              </div>
+            </div>
+            <div className="today__modes-item">
+              <h2>Biking</h2>
+              <div className="today__modes-stat">
+                <img id="" src={require('../assets/fact-stats/4x.png')}/>
+                <span>more usage</span>
+              </div>
+            </div>
+            <div className="today__modes-item">
+              <h2>Driving Alone</h2>
+              <div className="today__modes-stat">
+                <img src={require('../assets/fact-stats/50percent-down.png')}/>
+                <span>down 50%</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="today__sectionTwo">
           <h1>{todayData.sectionTwoTitle}</h1>
-        </div>
-        <div className="today__sectionTwoContent">
           {todayData._rawSectionTwoContent && <PortableText blocks={todayData._rawSectionTwoContent}/>}
         </div>
-        <div>For more information, visit&nbsp;
-          <a href={todayData.linkToInfo} target="_blank">goboston2030.org</a>
+        <div className="today__moreInfo">
+          <p>For more information, visit <a href={todayData.linkToInfo} target="_blank">goboston2030.org</a></p>
         </div>
         <div>{todayData.outro}</div>
 
