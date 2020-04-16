@@ -13,7 +13,7 @@ const Slider = props => {
         <label>Very unlikely</label>
         <label>Very likely</label>
       </div>
-      <input type="range" min="1" max="100" className="slider"/>
+      <input type="range" min="1" max="100" value={props.value}className="slider"/>
     </div>
   );
 }
