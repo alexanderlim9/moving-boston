@@ -50,8 +50,8 @@ body {
 }
 
 html,
-body,
+/* body,
 body > div,
-body > div > div {
+body > div > div */ {
   height: 100%;
 }

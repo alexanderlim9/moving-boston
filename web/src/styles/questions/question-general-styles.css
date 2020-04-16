@@ -2,7 +2,8 @@ body {
   background-color: #3A71FF;
 }
 
-.tl-edges, .tl-wrapper {
+.tl-edges,
+.tl-wrapper {
   height: 100%;
 }
 
@@ -38,15 +39,21 @@ body {
 
 .qintro__description {
   font-family: 'TitlingGothic', sans-serif;
-	font-size: 2.5em;
+  font-size: 2.5em;
   padding-bottom: 40px;
   width: 750px;
 }
 
 .qintro__cta {
   font-family: 'TitlingGothic', sans-serif;
-	font-size: 1.5em;
-	padding-bottom: 40px;
+  font-size: 0.875em;
+  padding-bottom: 40px;
+}
+
+.qintro__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .qnextprev {
@@ -57,18 +64,10 @@ body {
 }
 
 .qnextlink {
-  font-family: 'TitlingGothic', sans-serif;
+  font-family: 'UniversLTStdEx', sans-serif;
   transition: margin-left 200ms;
-}
-
-.qnextlink::before {
-  margin-right: 15px;
-  content: "→";
-}
-
-.qnextlink:hover {
-  cursor: pointer;
-  margin-left: 10px;
+  font-size: 1.125em;
+  width: 750px;
 }
 
 .qnextquestion {
