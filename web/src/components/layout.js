@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import '../styles/layout.css'
 import styles from './layout.module.css'
 import { Menu } from './menu/menu';
-import { propTypes } from '@sanity/block-content-to-react';
 import {
   FacebookShareButton,
   TwitterShareButton,
