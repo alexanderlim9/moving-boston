@@ -97,7 +97,7 @@ const IndexPage = props => {
   }
 
   return (
-    <Layout>
+    <Layout displayFooter>
       <div className="homepage">
         <div
           style={{ backgroundImage: `url(${hpdata.heroImage.asset.url})` }}
