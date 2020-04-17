@@ -25,7 +25,7 @@ const Layout = ({children, displayFooter, onHideNav, onShowNav, showNav, siteTit
     <div className={styles.content}>{children}</div>
     <footer className={displayFooter ? styles.visible : styles.hidden}>
       <div className={styles.footerRow1}>
-        <span>Moving Boston 2030</span>
+        <span><Link to={"/"}>Moving Boston 2030</Link></span>
         <div className={styles.navLinks}>
           <Link to={"/"}>Home</Link>
           <Link to={"/questions/questionone"}>Survey</Link>
