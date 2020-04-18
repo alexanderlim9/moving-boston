@@ -69,7 +69,7 @@ const TodayPage = props => {
           twoColor={"#2E2E2E"}
           threeColor={"#2E2E2E"}
         />
-        <div className="today__text">{todayData.intro}</div>
+        <div className="today__intro">{todayData.intro}</div>
         <div className="today__sectionOne">
           <h1>{todayData.sectionOneTitle}</h1>
           <div className="today__modes">

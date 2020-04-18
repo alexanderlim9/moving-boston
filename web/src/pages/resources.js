@@ -64,7 +64,7 @@ const ResourcesPage = props => {
   const [progressAmount, setProgressAmount] = useState("100%");
 
   return (
-    <Layout>
+    <Layout displayFooter>
       <div className="resources">
         <ProgressBar
           progressAmount={progressAmount}

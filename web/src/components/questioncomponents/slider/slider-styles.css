@@ -5,11 +5,23 @@ font-family: 'UniversLTStdEx', sans-serif;
 font-weight: 600;
 }
 
+.slider-title {
+    display: inline;
+}
+
+.slider-title:after {
+    content: " ";
+}
+
 .slider-labels {
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 font-size: .8em;
+}
+
+.slider-tooltip {
+    height: .9em;
 }
 
 .slider {
@@ -57,3 +69,29 @@ background: #fff;
 .slider::-moz-range-thumb:active {
     background: #fff;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 400px;
+    background-color: white;
+    color: black;
+    font-family: 'UniversLTStd', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

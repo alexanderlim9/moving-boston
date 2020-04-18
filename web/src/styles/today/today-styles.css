@@ -2,13 +2,20 @@
   padding: 60px 80px 10vh;
 }
 
-.today > div:not(:first-child) {
+.today > div:not(:first-child):not(:nth-child(2)) {
   font-family: 'UniversLTStdEx', sans-serif;
   font-weight: 900;
   font-size: 2em;
   color: white;
   width: 100%;
   margin-bottom: 50px;
+}
+
+.today__intro {
+  font-family: 'TitlingGothic', sans-serif;
+  font-size: 2.5em;
+  color: white;
+  padding-bottom: 40px;
 }
 
 h1 {
@@ -104,6 +111,6 @@ h1 {
   font-size: .5em;
 }
 
-.today__moreInfo > p > a:visited {
+.today__moreInfo > p > a, .today__moreInfo > p > a:visited {
   color: white;
 }

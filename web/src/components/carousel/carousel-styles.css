@@ -1,0 +1,34 @@
+.carousel {
+  margin: 40px 0px 80px;
+}
+
+.slide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 300px;
+}
+
+.slide > h3 {
+  font-family: 'TitlingGothic', sans-serif;
+  font-weight: 500;
+}
+
+.slide > p {
+  font-family: 'UniversLTStd', sans-serif;
+  width: 100%;
+
+  @media (min-width: 800px) {
+    width: 50%;
+  }
+}
+
+.slide-photo {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slick-dots li button:before, .slick-dots li.slick-active button:before {
+  color: white;
+}
