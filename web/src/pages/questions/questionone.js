@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import GraphQLErrorList from "../../components/graphql-error-list";
 import SEO from "../../components/seo";
@@ -100,6 +100,7 @@ const QuestionOne = props => {
     setDisplayStep(2);
     setProgressAmount("37.5%");
     setOneColor("#2E2E2E");
+    window.scrollTo(0,0)
   };
 
   return (
@@ -122,8 +123,14 @@ const QuestionOne = props => {
           }`}
         >
           <div className="qintro__description">{qoneData.introText3}</div>
-          <div className="qintro__cta" onClick={() => setStepTwo()}>
+          <div className="qintro__cta">
             <div className="qnextlink">{qoneData.segueToQuestion}</div>
+
+            <div className="qintro__buttons">
+              <div className="qbutton qnextquestion" onClick={() => setStepTwo()}>
+                Continue
+              </div>
+            </div>
           </div>
         </div>
 
@@ -136,12 +143,18 @@ const QuestionOne = props => {
             answerOptions={answerOptions}
           />
           <div className="qintro__cta" onClick={() => setStepThree()}>
-            <div className="qbutton qnextquestion" style={{display: "inline-block"}}>Next</div>
+            <div className="qbutton qnextquestion" style={{ display: "inline-block" }}>
+              Next
+            </div>
           </div>
         </div>
 
         {/* Payoff */}
-        <div className={`qcontent ${displayStep === 2 ? "qcontent--shown" : "qcontent--hidden"} qpayoff`}>
+        <div
+          className={`qcontent ${
+            displayStep === 2 ? "qcontent--shown" : "qcontent--hidden"
+          } qpayoff`}
+        >
           <div className="qintro__description">Let's see how you compare</div>
           <div className="payoff__text">
             Bostonians get around in a lot of different ways. On an average commute
@@ -182,13 +195,13 @@ const QuestionOne = props => {
                 <em>bike</em>
               </div>
             </div>
-
-            
           </div>
-          <div className="payoff__text payoff__text--bottom">and 5% use other forms of transportation.</div>
-            <div className="payoff__text payoff__text--bottom">
-              Data from 2014, compiled by <a href="http://goboston2030.org">GoBoston2030</a>
-            </div>
+          <div className="payoff__text payoff__percent payoff__text--bottom">
+            and 5% use other forms of transportation.
+          </div>
+          <div className="payoff__text payoff__text--bottom">
+            Data from 2014, compiled by <a href="http://goboston2030.org">GoBoston2030</a>
+          </div>
 
           <div className="qnextprev">
             <AniLink

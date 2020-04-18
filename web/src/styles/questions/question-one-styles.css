@@ -63,7 +63,6 @@
 }
 
 .sequential-intro-2 {
-  position: fixed;
   opacity: 0;
 
   animation: intro-2-appear 100ms forwards;
@@ -123,4 +122,9 @@
 
 .payoff__percent-block--small .payoff__percent {
   font-size: 5em;
+}
+
+.payoff__text--bottom.payoff__percent {
+  font-size: 2em;
+  height: auto;
 }

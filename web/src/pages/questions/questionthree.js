@@ -65,8 +65,17 @@ const QuestionThree = props => {
         />
         <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`}>
           <div className="qintro__description">{qthreeData.introNextDescription}</div>
-          <div className="qintro__cta" onClick={() => setIsOnIntro(false)}>
+          <div className="qintro__cta">
             <div className="qnextlink">{qthreeData.introNextTitle}</div>
+
+            <div className="qnextprev">
+              <AniLink fade duration={0.5} to={"questions/questiontwo/"} className="qprevquestion">
+                Previous Question
+              </AniLink>
+              <div className="qbutton qnextquestion" onClick={() => setIsOnIntro(false)}>
+                Continue
+              </div>
+            </div>
           </div>
         </div>
 
