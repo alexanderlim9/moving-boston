@@ -66,7 +66,7 @@ const AboutPage = props => {
                 Mel Chen
               </a>
               , and{" "}
-              <a target="__blank" href="">
+              <a target="__blank" href="http://smilyanski.com">
                 Yuliya Smilyanski
               </a>
               , Northeastern University Class of 2020. This project was completed under the
