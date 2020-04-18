@@ -9,6 +9,7 @@ import "../styles/inspiration/inspiration.css";
 import { Link } from "@reach/router";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import ProgressBar from "../components/progressbar/progressbar";
+import SimpleSlider from "../components/carousel/carousel";
 
 export const query = graphql`
   query Inspiration {
@@ -67,10 +68,13 @@ const Inspiration = props => {
           <p>It’s frustrating to hear that it seems like not much will change.</p>
           <p>But there are examples we can look to where cities have gotten it right. </p>
         </div>
+        <div className="main">
+          <SimpleSlider></SimpleSlider>
+        </div>
 
         <div className="qcontent qcontent--shown">
           <div className="qnextprev">
-            <AniLink fade duration={0.5} to={"questions/questiontwo/"} className="qprevquestion">
+            <AniLink fade duration={0.5} to={"questions/questionthree/"} className="qprevquestion">
               Previous Question
             </AniLink>
             <AniLink
