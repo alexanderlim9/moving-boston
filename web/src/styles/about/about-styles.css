@@ -1,0 +1,86 @@
+.about>* {
+  padding: 0 10vw 5vh;
+}
+
+.about__title {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 400;
+  font-family: 'TitlingGothic', sans-serif;
+}
+
+.about__text {
+  color: white;
+  font-size: 1.25em;
+  font-family: 'UniversLTStdEx', sans-serif;
+  padding-bottom: 20px;
+}
+
+.about__text a {
+  color: white;
+}
+
+.about__image {
+  background-image: url("../../assets/train.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 475px;
+  padding: 0;
+}
+
+.about__button {
+  font-family: 'TitlingGothic', sans-serif;
+  border: 2px solid white;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  font-size: 0.875em;
+  padding: 10px 40px;
+  text-decoration: none;
+  font-weight: 500;
+  text-shadow: none;
+  transition: background-color 200ms, color 200ms;
+  margin: 20px 0;
+}
+
+.about__button::after {
+  margin-left: 15px;
+  content: "→";
+}
+
+.about__button:hover {
+  background-color: #3A71FF;
+  color: white;
+  cursor: pointer;
+}
+
+.about-section__title {
+  color: white;
+  font-size: 1.75em;
+  font-family: 'UniversLTStdEx', sans-serif;
+}
+
+.about__section--split {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section__left,
+.about-section__right {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .about__section--split {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-section__left,
+  .about-section__right {
+    width: 48%;
+  }
+}
