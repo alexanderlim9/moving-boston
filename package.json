@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "antd": "^4.0.3",
+    "gatsby-plugin-manifest": "^2.3.5",
     "graphql": "^15.0.0",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
