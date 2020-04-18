@@ -1,0 +1,25 @@
+.intro {
+  width: 100%;
+
+  @media (min-width: 800px) {
+    width: 75%;
+  }
+}
+
+.intro > h1 {
+  font-weight: inherit;
+  padding-bottom: 0;
+}
+
+.intro > p {
+  font-family: 'UniversLTStdEx', sans-serif;
+  font-weight: 900;
+  font-size: 1.75em;
+  color: white;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.main {
+  width: 100%;
+}
