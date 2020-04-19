@@ -72,6 +72,10 @@
   content: "→";
 }
 
+.resource__link:hover {
+  color: #EBFF00;
+}
+
 .resource__link:hover::after {
   margin-left: 20px;
 }
