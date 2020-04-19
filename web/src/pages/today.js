@@ -59,7 +59,7 @@ const TodayPage = props => {
   alt={hpdata.heroImage.alt}
   className="hphero"> */
 
-  const [progressAmount, setProgressAmount] = useState("85%")
+  const [progressAmount, setProgressAmount] = useState("83.33%")
   return (
     <Layout>
       <div className="today">
@@ -119,15 +119,21 @@ const TodayPage = props => {
         </div>
         <div>{todayData.outro}</div>
 
-        <AniLink
-          paintDrip
-          hex="#3A71FF"
-          duration={0.5}
-          to={"resources"}
-          className="qbutton qnextquestion"
-        >
-          Let's do the work
-        </AniLink>
+        <div className="qnextprev-today">
+            <AniLink fade duration={0.5} to={"questions/questionthree/"} className="qprevquestion-today">
+              Previous
+            </AniLink>
+            <AniLink
+              paintDrip
+              hex="#3A71FF"
+              duration={0.5}
+              to={"inspiration/"}
+              shouldUpdateScroll={false}
+              className="qnextquestion-today"
+            >
+              Next
+            </AniLink>
+          </div>
       </div>
     </Layout>
   );

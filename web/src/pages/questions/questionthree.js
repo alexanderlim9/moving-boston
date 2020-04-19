@@ -109,7 +109,7 @@ const QuestionThree = props => {
               paintDrip
               hex="#3A71FF"
               duration={0.5}
-              to={"inspiration/"}
+              to={"today/"}
               shouldUpdateScroll={false}
               className="qnextquestion"
             >

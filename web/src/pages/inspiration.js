@@ -52,7 +52,7 @@ const Inspiration = props => {
   }
 
   const [isOnIntro, setIsOnIntro] = useState(true);
-  const [progressAmount, setProgressAmount] = useState("87.5%");
+  const [progressAmount, setProgressAmount] = useState("91.66%");
 
   return (
     <Layout>
@@ -74,14 +74,14 @@ const Inspiration = props => {
 
         <div className="qcontent qcontent--shown">
           <div className="qnextprev">
-            <AniLink fade duration={0.5} to={"questions/questionthree/"} className="qprevquestion">
+            <AniLink fade duration={0.5} to={"today/"} className="qprevquestion">
               Previous Question
             </AniLink>
             <AniLink
               paintDrip
               hex="#3A71FF"
               duration={0.5}
-              to={"today/"}
+              to={"resources/"}
               shouldUpdateScroll={false}
               className="qnextquestion"
             >
