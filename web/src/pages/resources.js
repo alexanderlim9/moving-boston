@@ -92,22 +92,22 @@ const ResourcesPage = props => {
             </div>
             <div className="col-right">
               <div className="resource__link-wrapper">
-                <a className="resource__link" href="https://www.boston.gov/environment-and-energy/reducing-emissions">
+                <a className="resource__link" target="_blank" href="https://www.boston.gov/environment-and-energy/reducing-emissions">
                   How does the MBTA play into making Boston carbon neutral by 2050?
                 </a>
               </div>
               <div className="resource__link-wrapper">
-                <a className="resource__link" href="https://www.bostonglobe.com/metro/2018/12/14/vision-get-around-future-traffic/AsMDO4CPHhWMt0M0mdyOAN/story.html?p1=Article_Inline_Text_Link">
+                <a className="resource__link" target="_blank" href="https://www.bostonglobe.com/metro/2018/12/14/vision-get-around-future-traffic/AsMDO4CPHhWMt0M0mdyOAN/story.html?p1=Article_Inline_Text_Link">
                   What can we do to decrease traffic in the streets of Boston?
                 </a>
               </div>
               <div className="resource__link-wrapper">
-                <a className="resource__link" href="https://www.mbta.com/projects">
+                <a className="resource__link" target="_blank" href="https://www.mbta.com/projects">
                   What MBTA projects are going on right now?
                 </a>
               </div>
               <div className="resource__link-wrapper">
-                <a className="resource__link" href="https://www.bostonglobe.com/opinion/2019/01/31/opinion-michelle-forget-fare-hikes-make-free/vJpKVu6Rft2C4Esi50mB5M/story.html">
+                <a className="resource__link" target="_blank" href="https://www.bostonglobe.com/opinion/2019/01/31/opinion-michelle-forget-fare-hikes-make-free/vJpKVu6Rft2C4Esi50mB5M/story.html">
                   How close are we to free public transit in Boston?
                 </a>
               </div>
@@ -135,7 +135,7 @@ const Resource = props => {
     <div className="resource">
       <div className="resource__context-title">{props.contexttitle}</div>
       <div className="resource__context">{props.context}</div>
-      <a className="resource__link" href={props.linkurl}>
+      <a className="resource__link" target="_blank" href={props.linkurl}>
         {props.linktitle}
       </a>
     </div>
