@@ -114,3 +114,49 @@ h1 {
 .today__moreInfo > p > a, .today__moreInfo > p > a:visited {
   color: white;
 }
+
+/* abstract this */
+
+.qnextprev-today {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.qnextquestion-today {
+  font-family: 'TitlingGothic', sans-serif;
+  border: 2px solid white;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  font-size: 0.5em;
+  padding: 10px 40px;
+  text-decoration: none;
+  font-weight: 500;
+  text-shadow: none;
+  transition: background-color 200ms, color 200ms;
+}
+
+.qnextquestion-today::after {
+  margin-left: 15px;
+  content: "→";
+}
+
+.qnextquestion-today:hover {
+  background-color: #3A71FF;
+  color: white;
+  cursor: pointer;
+}
+
+.qprevquestion-today {
+  font-family: 'TitlingGothic', sans-serif;
+  color: white;
+  font-size: 0.5em;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.qprevquestion-today:hover {
+  text-decoration: underline;
+}

@@ -40,6 +40,7 @@
     "gatsby-plugin-manifest": "^2.3.5",
     "gatsby-plugin-transition-link": "^1.18.0",
     "gsap": "^3.2.6",
+    "react-draggable": "^4.3.1",
     "react-share": "^4.1.0",
     "react-slick": "^0.25.2",
     "slick-carousel": "^1.8.1"

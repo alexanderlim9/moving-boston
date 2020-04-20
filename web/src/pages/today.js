@@ -60,7 +60,7 @@ const TodayPage = props => {
   alt={hpdata.heroImage.alt}
   className="hphero"> */
 
-  const [progressAmount, setProgressAmount] = useState("85%")
+  const [progressAmount, setProgressAmount] = useState("83.33%")
   return (
     <Layout>
       <div className="today">

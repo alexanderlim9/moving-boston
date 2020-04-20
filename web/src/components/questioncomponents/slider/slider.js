@@ -1,19 +1,40 @@
-import React from 'react';
+import React from "react";
 import Icon from "../../icon";
+import Draggable from 'react-draggable';
 import "./slider-styles.css";
 
 const Slider = props => {
+  const containerWidth = (global.innerWidth - 320);
+  const startX = containerWidth / 2;
+  const increment = containerWidth / 5
+  let getXPos = (sliderNumber) => {
+    return document.getElementsByClassName('slider-span')[sliderNumber].getBoundingClientRect().left + 5;
+  }
+
   return (
     <div className="slider-container">
       <p className="slider-title">{props.sliderTitle}</p>
       <div className="tooltip"><Icon className="slider-tooltip" symbol={'tooltip'} />
-  <span className="tooltiptext">{props.tooltipText}</span>
+        <span className="tooltiptext">{props.tooltipText}</span>
       </div>
       <div className="slider-labels">
         <label>Very unlikely</label>
         <label>Very likely</label>
       </div>
-      <input type="range" min="1" max="100" className="slider"/>
+      <div className="slider-object">
+        <hr className="slider-rule"/>
+        <Draggable 
+        axis="x"
+        bounds="parent"
+        defaultPosition={{x: startX, y: 0}}
+        grid={[increment, 0]}
+        disabled={props.zero}
+        >
+          <div className="slider-span">
+            <div className="slider-circle" style={ props.zero ? {transform: `translate(-${getXPos(props.sliderNumber)-80}px, 0px)`, transition: 'transform 2s ease-in-out'} : null}/>
+          </div>
+        </Draggable>
+      </div>
     </div>
   );
 }

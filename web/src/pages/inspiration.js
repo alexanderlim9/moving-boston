@@ -53,7 +53,7 @@ const Inspiration = props => {
   }
 
   const [isOnIntro, setIsOnIntro] = useState(true);
-  const [progressAmount, setProgressAmount] = useState("87.5%");
+  const [progressAmount, setProgressAmount] = useState("91.66%");
 
   return (
     <Layout>
