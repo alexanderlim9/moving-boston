@@ -10,6 +10,7 @@ import { Link } from "@reach/router";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import ProgressBar from "../components/progressbar/progressbar";
 import SimpleSlider from "../components/carousel/carousel";
+import { PageNav } from "../components/pagenav/pagenav";
 
 export const query = graphql`
   query Inspiration {
@@ -73,21 +74,13 @@ const Inspiration = props => {
         </div>
 
         <div className="qcontent qcontent--shown">
-          <div className="qnextprev">
-            <AniLink fade duration={0.5} to={"questions/questionthree/"} className="qprevquestion">
-              Previous Question
-            </AniLink>
-            <AniLink
-              paintDrip
-              hex="#3A71FF"
-              duration={0.5}
-              to={"today/"}
-              shouldUpdateScroll={false}
-              className="qnextquestion"
-            >
-              Next
-            </AniLink>
-          </div>
+
+        <PageNav
+          nextTitle={"Continue"}
+          nextLink={"today/"}
+          prevTitle={"Previous"}
+          prevLink={"questions/questionthree/"}
+        />
         </div>
       </div>
     </Layout>

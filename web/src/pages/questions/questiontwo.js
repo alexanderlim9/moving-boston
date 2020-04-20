@@ -6,9 +6,8 @@ import Layout from "../../containers/layout";
 
 import "../../styles/questions/question-two-styles.css";
 import "../../styles/questions/question-general-styles.css";
-import { Link } from "@reach/router";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import ProgressBar from "../../components/progressbar/progressbar";
+import { PageNav } from "../../components/pagenav/pagenav";
 
 export const query = graphql`
   query QuestionTwoQuery {
@@ -45,7 +44,6 @@ const QuestionTwo = props => {
     );
   }
 
-  const [isOnIntro, setIsOnIntro] = useState(true);
   const [progressAmount, setProgressAmount] = useState("50%");
 
   return (
@@ -62,29 +60,12 @@ const QuestionTwo = props => {
           className="qtwo__frq"
           placeholder={"What are some of your biggest frustrations?"}
         />
-        <div className="qnextprev">
-          <AniLink fade duration={.5} to={"questions/questionone/"} className="qprevquestion">
-            Previous Question
-          </AniLink>
-          <AniLink paintDrip hex="#3A71FF" duration={.5} to={"questions/questionthree/"} className="qnextquestion">
-            Next Question
-          </AniLink>
-        </div>
-        {/* <div className={`qintro ${isOnIntro ? "qintro--shown" : "qintro--hidden"}`}>
-          <div className="qintro__description">{qoneData.introNextDescription}</div>
-          <div className="qintro__cta" onClick={() => setIsOnIntro(false)}>
-            {qoneData.introNextTitle}
-          </div>
-        </div>
-
-        <div className={`qcontent ${isOnIntro ? "qcontent--hidden" : "qcontent--shown"}`}>
-          <div className="qintro__description">{qoneData.introNextTitle}</div>
-          <Frequency
-            setSpecificCallback={(opt, value) => setSpecificOption(opt, value)}
-            options={options}
-            answerOptions={answerOptions}
-          />
-        </div> */}
+        <PageNav
+          nextTitle={"Continue"}
+          nextLink={"questions/questionthree/"}
+          prevTitle={"Previous Question"}
+          prevLink={"questions/questionone/"}
+        />
       </div>
     </Layout>
   );

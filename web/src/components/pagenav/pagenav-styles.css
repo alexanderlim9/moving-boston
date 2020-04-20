@@ -1,0 +1,45 @@
+.pagenav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.pagenav .pagenav__next-link {
+  font-family: TitlingGothic, sans-serif;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  padding: 10px 40px;
+  text-decoration: none;
+  font-weight: 500;
+  text-shadow: none;
+  -webkit-transition: background-color .2s, color .2s;
+  transition: background-color .2s, color .2s;
+}
+
+.pagenav__next-link:hover {
+  background-color: #3a71ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pagenav__next-link::after {
+  margin-left: 15px;
+  content: "\2192";
+}
+
+.pagenav__prev-link {
+  font-family: TitlingGothic, sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.pagenav__prev-link:hover {
+  text-decoration: underline;
+}

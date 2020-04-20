@@ -8,6 +8,7 @@ import Layout from "../containers/layout";
 import "../styles/today/today-styles.css";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import ProgressBar from "../components/progressbar/progressbar";
+import { PageNav } from "../components/pagenav/pagenav";
 
 export const query = graphql`
   query TodayPageQuery {
@@ -118,16 +119,13 @@ const TodayPage = props => {
           </p>
         </div>
         <div>{todayData.outro}</div>
-
-        <AniLink
-          paintDrip
-          hex="#3A71FF"
-          duration={0.5}
-          to={"resources"}
-          className="qbutton qnextquestion"
-        >
-          Let's do the work
-        </AniLink>
+        
+        <PageNav
+          nextTitle={"Let's do the work"}
+          nextLink={"resources/"}
+          prevTitle={"Previous"}
+          prevLink={"inspiration/"}
+        />
       </div>
     </Layout>
   );

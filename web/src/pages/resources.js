@@ -86,15 +86,6 @@ const ResourcesPage = props => {
           })}
           <ShareResource />
         </div>
-        {/* <AniLink
-          paintDrip
-          hex="#3A71FF"
-          duration={0.5}
-          to={"questions/questiontwo/"}
-          className="qbutton qnextquestion"
-        >
-          Let's do the work
-        </AniLink> */}
       </div>
     </Layout>
   );

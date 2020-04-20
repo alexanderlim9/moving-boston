@@ -10,6 +10,7 @@ import Slider from "../../components/questioncomponents/slider/slider";
 import { Link } from "@reach/router";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import ProgressBar from "../../components/progressbar/progressbar";
+import { PageNav } from "../../components/pagenav/pagenav";
 
 export const query = graphql`
   query QuestionThreeQuery {
@@ -101,21 +102,13 @@ const QuestionThree = props => {
           sliderTitle="Ferries"
           tooltipText="A ferry is a boat that travels across a body of water with the main goal of carrying passengers. A ferry can travel back and forth between 2 ports, or drop off passengers at many stops – this is called a water bus or taxi. Boston does have some ferry service already, connecting Charlestown, Hingham, Hull, and Logan Airport to the Long Wharf, but stays mainly in the harbor."
           />
-          <div className="qnextprev">
-            <AniLink fade duration={0.5} to={"questions/questiontwo/"} className="qprevquestion">
-              Previous Question
-            </AniLink>
-            <AniLink
-              paintDrip
-              hex="#3A71FF"
-              duration={0.5}
-              to={"inspiration/"}
-              shouldUpdateScroll={false}
-              className="qnextquestion"
-            >
-              Next
-            </AniLink>
-          </div>
+
+        <PageNav
+          nextTitle={"Continue"}
+          nextLink={"inspiration/"}
+          prevTitle={"Previous Question"}
+          prevLink={"questions/questiontwo/"}
+        />
         </div>
       </div>
     </Layout>
