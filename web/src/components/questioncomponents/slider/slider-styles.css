@@ -68,7 +68,7 @@
     margin-right: -80px;
   }
 
-  #slider-circle {
+  .slider-circle {
     width: 22px;
     height: 22px;
     border: 3px solid white;
@@ -78,7 +78,7 @@
     margin-left: -3px;
   }
 
-  #slider-circle:active {
+  .slider-circle:active {
     background-color: #EBFF00;
     border-color: #EBFF00;
   }

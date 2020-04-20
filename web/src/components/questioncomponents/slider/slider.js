@@ -31,7 +31,7 @@ const Slider = props => {
         disabled={props.zero}
         >
           <div className="slider-span">
-            <div id="slider-circle" style={ props.zero ? {transform: `translate(-${getXPos(props.sliderNumber)-80}px, 0px)`, transition: 'transform 2s ease-in-out'} : null}/>
+            <div className="slider-circle" style={ props.zero ? {transform: `translate(-${getXPos(props.sliderNumber)-80}px, 0px)`, transition: 'transform 2s ease-in-out'} : null}/>
           </div>
         </Draggable>
       </div>
