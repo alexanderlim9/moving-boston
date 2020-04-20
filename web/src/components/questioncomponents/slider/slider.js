@@ -4,7 +4,9 @@ import Draggable from 'react-draggable';
 import "./slider-styles.css";
 
 const Slider = props => {
-  const startX = (window.innerWidth - 320) / 2;
+  const containerWidth = (window.innerWidth - 320);
+  const startX = containerWidth / 2;
+  const increment = containerWidth / 5
   let getXPos = (sliderNumber) => {
     return document.getElementsByClassName('slider-span')[sliderNumber].getBoundingClientRect().left + 5;
   }
@@ -25,6 +27,7 @@ const Slider = props => {
         axis="x"
         bounds="parent"
         defaultPosition={{x: startX, y: 0}}
+        grid={[increment, 0]}
         disabled={props.zero}
         >
           <div className="slider-span">
