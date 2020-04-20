@@ -8,7 +8,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const AboutPage = props => {
   return (
-    <Layout>
+    <Layout displayFooter>
       <div className="about">
         <div className="about__section">
           <div className="about__text" style={{padding: "30px 0 0"}}>About this experience</div>
@@ -29,8 +29,7 @@ const AboutPage = props => {
           </div>
 
           <AniLink
-            paintDrip
-            hex="#3A71FF"
+            fade
             duration={0.5}
             to={"questions/questionone/"}
             className="about__button"

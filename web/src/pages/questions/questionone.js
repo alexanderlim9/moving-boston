@@ -9,6 +9,7 @@ import "../../styles/questions/question-one-styles.css";
 import Frequency from "../../components/questioncomponents/frequency/frequency";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import ProgressBar from "../../components/progressbar/progressbar";
+import { PageNav } from "../../components/pagenav/pagenav";
 
 export const query = graphql`
   query QuestionOneQuery {
@@ -100,7 +101,7 @@ const QuestionOne = props => {
     setDisplayStep(2);
     setProgressAmount("37.5%");
     setOneColor("#2E2E2E");
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -142,9 +143,9 @@ const QuestionOne = props => {
             options={options}
             answerOptions={answerOptions}
           />
-          <div className="qintro__cta" onClick={() => setStepThree()}>
+          <div className="qintro__cta qintro__cta--special" onClick={() => setStepThree()}>
             <div className="qbutton qnextquestion" style={{ display: "inline-block" }}>
-              Next
+              Continue
             </div>
           </div>
         </div>
@@ -203,18 +204,10 @@ const QuestionOne = props => {
             Data from 2014, compiled by <a href="http://goboston2030.org">GoBoston2030</a>
           </div>
 
-          <div className="qnextprev">
-            <AniLink
-              paintDrip
-              hex="#3A71FF"
-              duration={0.5}
-              to={"questions/questiontwo/"}
-              onClick={() => setIsOnIntro(false)}
-              className="qbutton qnextquestion"
-            >
-              Next Question
-            </AniLink>
-          </div>
+          <PageNav
+            nextTitle={"Continue"}
+            nextLink={"questions/questiontwo/"}
+          />
         </div>
       </div>
     </Layout>

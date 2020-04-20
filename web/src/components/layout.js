@@ -1,9 +1,9 @@
-import React from 'react'
-import Header from './header'
-import { Link } from 'gatsby'
-import '../styles/layout.css'
-import styles from './layout.module.css'
-import { Menu } from './menu/menu';
+import React from "react";
+import Header from "./header";
+import { Link } from "gatsby";
+import "../styles/layout.css";
+import styles from "./layout.module.css";
+import { Menu } from "./menu/menu";
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -14,18 +14,22 @@ import {
   EmailIcon,
   EmailShareButton
 } from "react-share";
+import SEO from "./seo";
 
 const shareUrl = "https://moving-boston-web.netlify.com/";
 const iconSize = 28;
 
-const Layout = ({children, displayFooter, onHideNav, onShowNav, showNav, siteTitle}) => (
+const Layout = ({ children, displayFooter, onHideNav, onShowNav, showNav, siteTitle }) => (
   <>
+    <SEO title={siteTitle} />
     {/* <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} /> */}
-    <Menu/>
+    <Menu />
     <div className={styles.content}>{children}</div>
     <footer className={displayFooter ? styles.visible : styles.hidden}>
       <div className={styles.footerRow1}>
-        <span><Link to={"/"}>Moving Boston 2030</Link></span>
+        <span>
+          <Link to={"/"}>Moving Boston 2030</Link>
+        </span>
         <div className={styles.navLinks}>
           <Link to={"/"}>Home</Link>
           <Link to={"/questions/questionone"}>Survey</Link>
@@ -72,6 +76,6 @@ const Layout = ({children, displayFooter, onHideNav, onShowNav, showNav, siteTit
       </div>
     </footer>
   </>
-)
+);
 
-export default Layout
+export default Layout;

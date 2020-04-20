@@ -48,6 +48,14 @@ body {
   font-family: 'TitlingGothic', sans-serif;
   font-size: 0.875em;
   padding-bottom: 40px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+/* I don't know how to fix this so I'm bandaid fixing it -Mel */
+.qintro__cta--special {
+  align-items: flex-end;
 }
 
 .qintro__buttons {
@@ -68,6 +76,7 @@ body {
   transition: margin-left 200ms;
   font-size: 1.125em;
   width: 750px;
+  flex: 1;
 }
 
 .qnextquestion {

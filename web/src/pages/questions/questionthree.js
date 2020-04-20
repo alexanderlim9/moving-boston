@@ -10,6 +10,7 @@ import Slider from "../../components/questioncomponents/slider/slider";
 import { Link } from "@reach/router";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import ProgressBar from "../../components/progressbar/progressbar";
+import { PageNav } from "../../components/pagenav/pagenav";
 
 export const query = graphql`
   query QuestionThreeQuery {
