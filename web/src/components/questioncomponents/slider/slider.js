@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Icon from "../../icon";
 import Draggable from 'react-draggable'; // The default
 import "./slider-styles.css";
 
 const Slider = props => {
   const startX = (window.innerWidth - 320) / 2;
-  const [zero, setZero] = useState(false);
-  const getXPos = () => {
-    return document.getElementById('slider-span').getBoundingClientRect().left;
+  let getXPos = (sliderNumber) => {
+    return document.getElementsByClassName('slider-span')[sliderNumber].getBoundingClientRect().left + 5;
   }
 
   return (
@@ -25,18 +24,13 @@ const Slider = props => {
         <Draggable 
         axis="x"
         bounds="parent"
-        // defaultPosition={{x: startX, y: 0}}
+        defaultPosition={{x: startX, y: 0}}
         >
-          {/* <div className="slider-circle" style={`${zero ? setToZero : " "}`}/> */}
-          <div id="slider-span">
-            <div id="slider-circle" style={ zero ? {transform: `translate(-${getXPos()-80}px, 0px)`, transition: 'transform 2s ease-in-out'} : {background: 'yellow'}}/>
-            {/* <div id="slider-circle" style={ `${zero ? {transform: `translate(- ${getXPos()} , 0px)`, transition: 'transform 2s ease-in-out'} : {background: 'yellow'}}`}/> */}
-            {/* <div id="slider-circle" style={ zero ? {transform: 'translate(-' + 100 + ', 0px)', transition: 'transform 2s ease-in-out'} : {background: 'yellow'}}/> */}
+          <div className="slider-span">
+            <div id="slider-circle" style={ props.zero ? {transform: `translate(-${getXPos(props.sliderNumber)-80}px, 0px)`, transition: 'transform 2s ease-in-out'} : null}/>
           </div>
         </Draggable>
       </div>
-      <button onClick={() => {console.log(`translate(-${getXPos()}px, 0px)`); setZero(true)}}></button>
-      {/* <input type="range" min="1" max="100" className="slider"/> */}
     </div>
   );
 }
