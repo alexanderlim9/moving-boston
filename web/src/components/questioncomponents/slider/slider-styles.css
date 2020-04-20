@@ -1,23 +1,23 @@
 .slider-container {
-width: 100%; /* Width of the outside container */
-margin: 50px auto;
-font-family: 'UniversLTStdEx', sans-serif;
-font-weight: 600;
+  width: 100%;
+  margin: 50px auto;
+  font-family: 'UniversLTStdEx', sans-serif;
+  font-weight: 600;
 }
 
 .slider-title {
-    display: inline;
+  display: inline;
 }
 
 .slider-title:after {
-    content: " ";
+  content: " ";
 }
 
 .slider-labels {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-font-size: .8em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: .8em;
 }
 
 .slider-tooltip {
@@ -29,7 +29,6 @@ font-size: .8em;
     display: inline-block;
   }
   
-  /* Tooltip text */
   .tooltip .tooltiptext {
     visibility: hidden;
     width: 400px;
@@ -40,12 +39,10 @@ font-size: .8em;
     padding: 10px;
     border-radius: 6px;
    
-    /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
   }
   
-  /* Show the tooltip text when you mouse over the tooltip container */
   .tooltip:hover .tooltiptext {
     visibility: visible;
   }
