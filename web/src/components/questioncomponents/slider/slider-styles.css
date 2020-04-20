@@ -95,3 +95,38 @@ background: #fff;
   .tooltip:hover .tooltiptext {
     visibility: visible;
   }
+
+  .slider-object {
+    width: inherit;
+    margin: 30px 0;
+  }
+
+  .slider-rule {
+    margin-top: 15px;
+    margin-bottom: -15px;
+    border: 2px solid white;
+  }
+
+  #slider-span {
+
+    width: 22px;
+    height: 22px;
+    border: 2px solid coral;
+    margin-left: 80px;
+    margin-right: -80px;
+    background-color: coral;
+  }
+
+  #slider-circle {
+    width: 22px;
+    height: 22px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: #3A71FF;
+    /* margin-left: 80px;
+    margin-right: -80px; */
+  }
+
+  .slider-circle:active {
+    background-color: white;
+  }
