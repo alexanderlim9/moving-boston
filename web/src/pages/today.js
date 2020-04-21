@@ -121,10 +121,10 @@ const TodayPage = props => {
         <div>{todayData.outro}</div>
         
         <PageNav
-          nextTitle={"Let's do the work"}
-          nextLink={"resources/"}
+          nextTitle={"Continue"}
+          nextLink={"inspiration/"}
           prevTitle={"Previous"}
-          prevLink={"inspiration/"}
+          prevLink={"questions/questionthree/"}
         />
       </div>
     </Layout>

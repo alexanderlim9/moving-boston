@@ -76,10 +76,10 @@ const Inspiration = props => {
         <div className="qcontent qcontent--shown">
 
         <PageNav
-          nextTitle={"Continue"}
-          nextLink={"today/"}
+          nextTitle={"Let's do the work"}
+          nextLink={"resources/"}
           prevTitle={"Previous"}
-          prevLink={"questions/questionthree/"}
+          prevLink={"today/"}
         />
         </div>
       </div>
