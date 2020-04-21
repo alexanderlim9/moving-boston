@@ -87,8 +87,6 @@ const IndexPage = props => {
 
   const site = (data || {}).site;
   const hpdata = (data || {}).sanityHomePage;
-  console.log(hpdata);
-  // console.log(imageUrlFor(buildImageObj(hpdata._rawHeroImage)))
 
   if (!site) {
     throw new Error(

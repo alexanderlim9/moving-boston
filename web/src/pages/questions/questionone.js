@@ -46,7 +46,6 @@ const QuestionOne = props => {
 
   const site = (data || {}).site;
   const qoneData = (data || {}).sanityQuestion1;
-  console.log(qoneData);
 
   if (!site) {
     throw new Error(
@@ -81,7 +80,6 @@ const QuestionOne = props => {
   const [oneColor, setOneColor] = useState("#3A71FF");
 
   const setSpecificOption = (opt, value) => {
-    console.log("opt", opt.image);
     setOptions({
       ...options,
       [opt]: {

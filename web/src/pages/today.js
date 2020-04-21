@@ -46,8 +46,6 @@ const TodayPage = props => {
   const site = (data || {}).site;
   //   const { title, _rawBody, subtitle } = (data || {}).sanityHomePage;
   const todayData = (data || {}).sanityToday;
-  console.log(todayData);
-  // console.log(imageUrlFor(buildImageObj(hpdata._rawHeroImage)))
 
   if (!site) {
     throw new Error(

@@ -36,7 +36,6 @@ const QuestionTwo = props => {
 
   const site = (data || {}).site;
   const qtwoData = (data || {}).sanityQuestion2;
-  console.log(qtwoData);
 
   if (!site) {
     throw new Error(

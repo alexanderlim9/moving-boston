@@ -52,8 +52,6 @@ const ResourcesPage = props => {
   const site = (data || {}).site;
   //   const { title, _rawBody, subtitle } = (data || {}).sanityHomePage;
   const resourcesData = (data || {}).sanityResources;
-  console.log(resourcesData);
-  // console.log(imageUrlFor(buildImageObj(hpdata._rawHeroImage)))
 
   if (!site) {
     throw new Error(

@@ -4,7 +4,6 @@ import "./frequency-styles.css";
 // get options as props as json object get keys, callback prop for option values
 
 const Frequency = props => {
-  // console.log(props.options);
   return (
     <div className="frequency">
       <ul className="frequency__list">
@@ -28,8 +27,6 @@ const Frequency = props => {
 
 const FrequencyItem = props => {
   const [isOpen, setIsOpen] = useState(false);
-
-  console.log(props.currentSelectedAnswerOption);
 
   const handleOptionClick = element => {
     props.setSpecificCallback(element);
