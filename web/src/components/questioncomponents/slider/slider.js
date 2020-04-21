@@ -4,7 +4,7 @@ import Draggable from 'react-draggable';
 import "./slider-styles.css";
 
 const Slider = props => {
-  const containerWidth = (global.innerWidth - 320);
+  const containerWidth = (globalThis.innerWidth - 320);
   const startX = containerWidth / 2;
   const increment = containerWidth / 5
   let getXPos = (sliderNumber) => {
