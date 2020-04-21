@@ -62,7 +62,7 @@ const Inspiration = props => {
           progressAmount={progressAmount}
           oneColor={"#2E2E2E"}
           twoColor={"#2E2E2E"}
-          threeColor={"#EBFF00"}
+          threeColor={"#2E2E2E"}
         />
         <div className="intro">
           <h1 className="qintro__description">We know that Boston can do this.</h1>
