@@ -39,7 +39,7 @@ export default class SimpleSlider extends Component {
           <div className="slide">
           <img className="slide-photo" src={require("../../assets/inspiration/boston.png")}></img>
             <h3>Boston, Massachusetts</h3>
-            <p>We can even be inspired by our own programs – Boston’s CitiBike has made it easier to get to & from T stations, reducing the need for cars or ride-hailing services.</p>
+            <p>We can even be inspired by our own programs – Boston’s BlueBike has made it easier to get to and from T stations, reducing the need for cars or ride-hailing services.</p>
           </div>
         </Slider>
       </div>
