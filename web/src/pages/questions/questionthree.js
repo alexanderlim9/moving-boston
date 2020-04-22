@@ -112,9 +112,12 @@ const QuestionThree = props => {
           sliderNumber="4"
           zero={zero}
           />
-          <button id="setToZeroButton" className={`${zero ? 'hidden' : ''}`} onClick={() => setZero(true)}>Continue</button>
+          <button id="setToZeroButton" className={`pagenav__next-link ${zero ? 'qcontent--hidden' : 'qcontent--shown'}`} onClick={() => setZero(true)}>Continue</button>
+          <div className={`animation-context ${zero ? 'qcontent--shown' : 'qcontent--hidden'}`}>
+            Unfortunately, none of these are likely to happen by 2030 based on Boston's current plans.
+          </div>
 
-          <div className={`qnextprev ${zero ? '' : 'hidden'}`}>
+          <div className={`qnextprev ${zero ? 'qcontent--shown' : 'qcontent--hidden'}`}>
             <PageNav
               nextTitle={"Continue"}
               nextLink={"today/"}

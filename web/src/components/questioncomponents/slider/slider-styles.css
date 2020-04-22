@@ -82,16 +82,3 @@
     background-color: #EBFF00;
     border-color: #EBFF00;
   }
-
-  #setToZeroButton {
-    width: 180px;
-    height: 45px;
-    border-radius: 25px;
-    font-family: 'TitlingGothic', sans-serif;
-    font-size: 14px;
-    float: right;
-  }
-
-  .hidden {
-    display: none;
-  }
