@@ -64,7 +64,7 @@
 
   @nest & a {
     color: inherit;
-    padding-right: 15%;
+    padding-right: 6vw;
   }
 
   @media (hover: hover) {
