@@ -156,52 +156,52 @@ const QuestionOne = props => {
         >
           <div className="qintro__description">Let's see how you compare</div>
           <div className="payoff__text">
-            Bostonians get around in a lot of different ways. On an average commute
+            Bostonians get around in a lot of different ways. On an average commute:
           </div>
 
-          <div className="payoff__percent-block">
-            <div className="payoff__percent">39%</div>
-            <div className="payoff__text">
-              of Bostonians <em>drive alone</em>
+          <div className="payoff__row big">
+            <div className="payoff__percent-block">
+              <div className="payoff__percent big">39%</div>
+              <div className="payoff__text caption">
+                of Bostonians <em>drive alone</em>
+              </div>
+            </div>
+            <div className="payoff__percent-block">
+              <div className="payoff__percent big">34%</div>
+              <div className="payoff__text caption">
+                take <em>public transit</em>, including the T, bus, and commuter rail
+              </div>
             </div>
           </div>
 
-          <div className="payoff__percent-block">
-            <div className="payoff__percent">34%</div>
-            <div className="payoff__text">
-              take <em>public transit</em>, including the T, bus, &amp; commuter rail
-            </div>
-          </div>
-
-          <div className="payoff__percent-block payoff__small-container">
+          <div className="payoff__row small">
             <div className="payoff__percent-block--small">
-              <div className="payoff__percent">14%</div>
-              <div className="payoff__text">
+              <div className="payoff__percent small">14%</div>
+              <div className="payoff__text caption">
                 <em>walk</em>
               </div>
             </div>
-
             <div className="payoff__percent-block--small">
-              <div className="payoff__percent">6%</div>
-              <div className="payoff__text">
+              <div className="payoff__percent small">6%</div>
+              <div className="payoff__text caption">
                 <em>carpool</em>
               </div>
             </div>
-
             <div className="payoff__percent-block--small">
-              <div className="payoff__percent">2%</div>
-              <div className="payoff__text">
+              <div className="payoff__percent small">2%</div>
+              <div className="payoff__text caption">
                 <em>bike</em>
               </div>
             </div>
           </div>
-          <div className="payoff__text payoff__percent payoff__text--bottom">
-            and 5% use other forms of transportation.
+          <div className="payoff__row bottom">
+            <div className="payoff__text">
+              and 5% use other forms of transportation.
+            </div>
+            <div className="payoff__text payoff__text--bottom">
+              Data from 2014, compiled by <a href="http://goboston2030.org">GoBoston2030</a>
+            </div>
           </div>
-          <div className="payoff__text payoff__text--bottom">
-            Data from 2014, compiled by <a href="http://goboston2030.org">GoBoston2030</a>
-          </div>
-
           <PageNav
             nextTitle={"Continue"}
             nextLink={"questions/questiontwo/"}
