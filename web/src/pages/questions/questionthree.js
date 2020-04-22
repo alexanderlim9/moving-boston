@@ -115,19 +115,12 @@ const QuestionThree = props => {
           <button id="setToZeroButton" className={`${zero ? 'hidden' : ''}`} onClick={() => setZero(true)}>Continue</button>
 
           <div className={`qnextprev ${zero ? '' : 'hidden'}`}>
-            <AniLink fade duration={0.5} to={"questions/questiontwo/"} className="qprevquestion">
-              Previous Question
-            </AniLink>
-            <AniLink
-              paintDrip
-              hex="#3A71FF"
-              duration={0.5}
-              to={"today/"}
-              shouldUpdateScroll={false}
-              className="qnextquestion"
-            >
-              Next
-            </AniLink>
+            <PageNav
+              nextTitle={"Continue"}
+              nextLink={"today/"}
+              prevTitle={"Previous Question"}
+              prevLink={"questions/questiontwo/"}
+            />
           </div>
         </div>
       </div>
