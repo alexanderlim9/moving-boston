@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@sanity/cli": "^0.147.8",
-    "css-loader": "^3.4.2",
+    "css-loader": "^6.7.3",
     "lerna": "^3.20.2"
   },
   "dependencies": {
